@@ -1,0 +1,3 @@
+etc/dnf
+var/lib/dnf
+var/cache/dnf

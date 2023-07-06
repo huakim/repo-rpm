@@ -1,0 +1,8 @@
+[base]
+name=CentOS-$releasever - Base
+baseurl=file:///var/lib/dnf/local/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+gpgcheck=0
+enabled=1
+#gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
