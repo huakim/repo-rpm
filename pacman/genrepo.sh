@@ -1,4 +1,5 @@
 #!/bin/sh
 dir="$(realpath $(dirname $0))/var/lib/dnf/local/"
+mkdir -p "$dir"
 createrepo "$dir"
-dnf --disablerepo='*' --enablerepo='base' makecache
+zypper ref -r 'base'
