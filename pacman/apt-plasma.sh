@@ -14,7 +14,7 @@ $pkgs
 accountsservice
 ark
 bluedevil
-dolphin-root
+dolphin
 gnome-disk-utility
 gwenview
 kde-connect

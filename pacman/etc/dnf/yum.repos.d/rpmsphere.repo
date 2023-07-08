@@ -6,6 +6,7 @@ skip_if_unavailable=True
 gpgcheck=0
 sslverify=True
 enabled=1
+keeppackages=1
 
 [rpmsphere-noarch]
 name=RPM Sphere - Noarch
@@ -15,6 +16,7 @@ skip_if_unavailable=True
 gpgcheck=0
 sslverify=True
 enabled=1
+keeppackages=1
 
 [rpmsphere-source]
 name=RPM Sphere - Source
@@ -24,6 +26,7 @@ skip_if_unavailable=True
 gpgcheck=0
 sslverify=True
 enabled=0
+keeppackages=1
 
 [rpmsphere-caution]
 name=RPM Sphere - Caution
@@ -33,3 +36,4 @@ skip_if_unavailable=True
 gpgcheck=0
 sslverify=True
 enabled=0
+keeppackages=1

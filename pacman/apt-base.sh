@@ -11,16 +11,13 @@ bind-utils
 btrfs-progs
 ca-certificates
 dhcp-client
-dhcp-client
-dnf-plugin-system-upgrade
-dnf-plugins-core
 dosfstools
 file
 grub2-pc
+glibc-langpack-us
 inotify-tools
 iputils
 kbd
-kernel
 less
 lsof
 nano
@@ -37,8 +34,10 @@ systemd
 systemd-resolved
 systemd-sysv
 traceroute
+tzdata
 which
 whois
+zypper
 "
 
 #push @pkgs, "apt-file", "apt-rdepends", "at-spi2-core", "apt-utils", 
@@ -67,12 +66,21 @@ kernel
 #"linux-image-liquorix-amd64";
 
 load(){
-  yum install -y $pkgs "${@}"
+  if ! command -v zypper &> /dev/null
+  then
+    for i in dnf yum dnf5 microdnf;
+    do
+      if command -v $i &> /dev/null;
+      then
+        COM="$i install -y "
+        break
+      fi
+    done
+    $COM zypper
+    zypper --non-interactive remove dnf yum dnf5 microdnf
+  fi
+  zypper --non-interactive install --force --no-recommends $pkgs "${@}"
 }
-
-#our sub load{
-#    system("yum", "reinstall", "-y", @pkgs, @_); 
-#}
 
 if test -z "$caller"; then
     load
