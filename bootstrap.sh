@@ -28,7 +28,7 @@ i sys
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
 #chroot . /bin/bash /extra/pacman/aptat.sh
-INSTALLROOT="$(pwd)" /bin/bash "/extra/pacman/apt-$1.sh"
+INSTALLROOT="$(pwd)" perl "/extra/pacman/apt-$1.pl"
 i extra "${smp}"
 chroot . /bin/bash /extra/pacman/copy.sh
 chroot . /bin/bash /extra/pacman/user.sh

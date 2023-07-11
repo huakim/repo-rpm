@@ -1,6 +1,4 @@
 #!/bin/perl
-$ENV{'ZYPP_SINGLE_RPMTRANS'}=1;
-$ENV{'ZYPP_MEDIANETWORK'}=1;
 our @pkgs;
 use Data::Dumper;
 $Data::Dumper::Terse=1;
@@ -76,7 +74,7 @@ our sub load {
   my $RECOMMENDS=$ENV{'RECOMMENDS'};
   my $NEEDED=$ENV{'NEEDED'};
   
-  my @flags=qw(zypper);
+  my @flags=qw(env ZYPP_SINGLE_RPMTRANS=1 ZYPP_MEDIANETWORK=1 zypper);
   defined $INSTALLROOT && push @flags, qw(--installroot), $INSTALLROOT;
   defined $INTERACTIVE || push @flags, qw(-n);
   defined $QUIET || push @flags, qw(-v -v -v -v);
