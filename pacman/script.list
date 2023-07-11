@@ -1,4 +1,5 @@
 apt.list
+aptl.list
 apt-base.sh
 apt-gui.sh
 apt-plasma.sh

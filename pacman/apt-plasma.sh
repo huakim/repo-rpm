@@ -9,8 +9,7 @@ dir="$(realpath $(dirname $0))/"
 
 caller="base" . "${dir}/apt-gui.sh";
 
-pkgs="
-$pkgs
+pkgs+=(
 accountsservice
 ark
 bluedevil
@@ -46,7 +45,7 @@ sddm-kcm
 upower
 vlc
 xdg-desktop-portal-kde
-"
+)
 
 #push @pkgs, "accountsservice", "ark", "bluedevil", "dolphin-root", 
 #"gnome-disk-utility", "gwenview", "kde-config-gtk-style", 
@@ -59,13 +58,12 @@ xdg-desktop-portal-kde
 #"systemsettings", "upower", "vlc", "vlc-plugin-access-extra", 
 #"xdg-desktop-portal-kde";
 
-pkgs="
-$pkgs
+pkgs+=(
 kmail-account-wizard
 falkon
 kmail
-"
+)
 
 if test -z "${caller}"; then
-    load
+    load "${@}"
 fi

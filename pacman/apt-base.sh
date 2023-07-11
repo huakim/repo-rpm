@@ -1,7 +1,8 @@
-#!/bin/sh
-
-pkgs="
-$pkgs
+#!/bin/bash
+export ZYPP_SINGLE_RPMTRANS=1
+export ZYPP_MEDIANETWORK=1
+declare -a pkgs
+pkgs+=(
 NetworkManager
 NetworkManager-openvpn
 NetworkManager-wifi
@@ -14,7 +15,7 @@ dhcp-client
 dosfstools
 file
 grub2-pc
-glibc-langpack-us
+glibc-langpack-en
 inotify-tools
 iputils
 kbd
@@ -38,7 +39,7 @@ tzdata
 which
 whois
 zypper
-"
+)
 
 #push @pkgs, "apt-file", "apt-rdepends", "at-spi2-core", "apt-utils", 
 #"ca-certificates", "console-setup", "dosfstools", "dpkg", "dpkg-repack", 
@@ -51,14 +52,13 @@ zypper
 #"sudo", "usr-is-merged", "whois", "whiptail", "wpasupplicant";
 
 
-pkgs="
-$pkgs
+pkgs+=(
 realtek-firmware
 intel-compute-runtime
 mesa-dri-drivers
 nvidia-gpu-firmware
 kernel
-"
+)
 #"firmware-misc-nonfree",
 #"firmware-realtek",
 #"firmware-linux-free",
@@ -66,22 +66,13 @@ kernel
 #"linux-image-liquorix-amd64";
 
 load(){
-  if ! command -v zypper &> /dev/null
-  then
-    for i in dnf yum dnf5 microdnf;
-    do
-      if command -v $i &> /dev/null;
-      then
-        COM="$i install -y "
-        break
-      fi
-    done
-    $COM zypper
-    zypper --non-interactive remove dnf yum dnf5 microdnf
+  flags=(--non-interactive)
+  if [ -n "$INSTALLROOT" ]; then
+    flags+=(--installroot "$INSTALLROOT")
   fi
-  zypper --non-interactive install --force --no-recommends $pkgs "${@}"
+  zypper --non-interactive "${flags[@]}" install --force --no-recommends "${pkgs[@]}" "${@}"
 }
 
 if test -z "$caller"; then
-    load
+    load "${@}"
 fi

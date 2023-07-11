@@ -6,4 +6,4 @@ dest="${1}/"
 
 parsefile "apt.list" 'cldir'
 copy "etc/dnf"
-ln -sfT "dnf/yum.repos.d" "${dest}/etc/yum.repos.d"
+parsefile "aptl.list" 'rlnk'

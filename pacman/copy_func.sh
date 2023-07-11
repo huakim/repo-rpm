@@ -5,11 +5,12 @@ bkup(){
 }
 
 copy(){
-  d="$(dirname "$dest${1:-$2}")"
+  f="$dest${2:-$1}"
+  d="$(dirname "$ds")"
   if ! test -d "$d"; then
     mkdir -pv "$d"
   fi
-  cp -RTfvp "$dir$1" "$dest${1:-$2}"
+  cp -RTfvp "$dir$1" "$f"
 }
 
 dirmk(){
@@ -17,9 +18,15 @@ dirmk(){
 }
 
 link(){
- f="$dest${1:-$2}"
+ f="$dest${2:-$1}"
  rm -Rfv "$f"
  ln -sTfv "$dir$1" "$f"
+}
+
+rlnk(){
+ f="$dest$2"
+ rm -Rfv "$f"
+ ln -sTfv "$1" "$f"
 }
 
 cldir(){

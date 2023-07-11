@@ -9,8 +9,7 @@ dir="$(realpath $(dirname $0))/"
 
 caller=base . "${dir}/apt-base.sh";
 
-pkgs="
-$pkgs
+pkgs+=(
 dbus-x11
 geany
 gnome-themes-extra
@@ -20,7 +19,7 @@ pulseaudio
 pulseaudio-module-bluetooth
 xorg-x11-server-Xephyr
 xorg-x11-server-Xorg
-"
+)
 #push @pkgs, "dbus-x11", "geany", "gnome-themes-extra", "menulibre", 
 #"ovmf", "libvirt-clients", "pavucontrol", "plymouth-themes", "pulseaudio", 
 #"pulseaudio-module-bluetooth", "qemu-system-gui", "qemu-system-x86", 
@@ -28,5 +27,5 @@ xorg-x11-server-Xorg
 #"xserver-xephyr";
 
 if test -z "$caller"; then
-    load
+    load "${@}"
 fi
