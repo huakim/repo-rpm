@@ -1,17 +1,6 @@
 #!/bin/sh
-
-if [ -z "$new_user"]; then
- echo -n 'User: '
- read user
-else
- user="$new_user"
-fi
-
-if [ -z "$new_pswd"]; then
- password="$(mkpasswd)"
-else
- password="$new_pswd"
-fi
+user="lenovo"
+password='$y$j9T$mmXw9Jh0PiPha988WSRo3.$tGOra7DOoU5dbQrk23h9.DqkEBrYCLIQf2B.pEdV2C9'
 
 root='root'
 shell='/bin/bash'

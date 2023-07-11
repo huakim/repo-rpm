@@ -1,8 +1,8 @@
 apt.list
 aptl.list
-apt-base.sh
-apt-gui.sh
-apt-plasma.sh
+apt-base.pl
+apt-gui.pl
+apt-plasma.pl
 aptat.sh
 aptdt.sh
 aptbk.sh

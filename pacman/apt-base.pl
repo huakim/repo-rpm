@@ -1,8 +1,11 @@
-#!/bin/bash
-export ZYPP_SINGLE_RPMTRANS=1
-export ZYPP_MEDIANETWORK=1
-declare -a pkgs
-pkgs+=(
+#!/bin/perl
+$ENV{'ZYPP_SINGLE_RPMTRANS'}=1;
+$ENV{'ZYPP_MEDIANETWORK'}=1;
+our @pkgs;
+use Data::Dumper;
+$Data::Dumper::Terse=1;
+$Data::Dumper::Indent=0;
+push @pkgs, qw(
 NetworkManager
 NetworkManager-openvpn
 NetworkManager-wifi
@@ -39,7 +42,7 @@ tzdata
 which
 whois
 zypper
-)
+);
 
 #push @pkgs, "apt-file", "apt-rdepends", "at-spi2-core", "apt-utils", 
 #"ca-certificates", "console-setup", "dosfstools", "dpkg", "dpkg-repack", 
@@ -52,27 +55,44 @@ zypper
 #"sudo", "usr-is-merged", "whois", "whiptail", "wpasupplicant";
 
 
-pkgs+=(
+push @pkgs, qw(
 realtek-firmware
 intel-compute-runtime
 mesa-dri-drivers
 nvidia-gpu-firmware
 kernel
-)
+);
 #"firmware-misc-nonfree",
 #"firmware-realtek",
 #"firmware-linux-free",
 #"firmware-iwlwifi",
 #"linux-image-liquorix-amd64";
 
-load(){
-  flags=(--non-interactive)
-  if [ -n "$INSTALLROOT" ]; then
-    flags+=(--installroot "$INSTALLROOT")
-  fi
-  zypper --non-interactive "${flags[@]}" install --force --no-recommends "${pkgs[@]}" "${@}"
+our sub load {
+  my $INSTALLROOT=$ENV{"INSTALLROOT"};
+  my $INTERACTIVE=$ENV{'INTERACTIVE'};
+  my $QUIET=$ENV{'QUIET'};
+  my $REFRESH=$ENV{'REFRESH'};
+  my $RECOMMENDS=$ENV{'RECOMMENDS'};
+  my $NEEDED=$ENV{'NEEDED'};
+  
+  my @flags=qw(zypper);
+  defined $INSTALLROOT && push @flags, qw(--installroot), $INSTALLROOT;
+  defined $INTERACTIVE || push @flags, qw(-n);
+  defined $QUIET || push @flags, qw(-v -v -v -v);
+  defined $QUIET && push @flags, qw(-q -q -q -q);
+  defined $REFRESH || push @flags, qw(--no-refresh);
+  push @flags, 'install';
+  defined $NEEDED || push @flags, qw(--force); 
+  defined $RECOMMENDS || push @flags, qw(--no-recommends); 
+  defined $RECOMMENDS && push @flags, qw(--recommends); 
+
+  push @flags, @_, @pkgs;
+  
+  print Dumper(\@flags);
+  system(@flags);
 }
 
-if test -z "$caller"; then
-    load "${@}"
-fi
+unless (caller){
+  load @ARGV;
+}
