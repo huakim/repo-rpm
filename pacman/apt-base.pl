@@ -14,6 +14,7 @@ btrfs-progs
 ca-certificates
 dhcp-client
 dosfstools
+dracut-live
 file
 grub2-pc
 glibc-langpack-en
