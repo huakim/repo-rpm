@@ -1,0 +1,6 @@
+[packman]
+enabled=1
+autorefresh=1
+baseurl=http://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/
+priority=999
+keeppackages=1

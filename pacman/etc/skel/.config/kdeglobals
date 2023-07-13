@@ -136,33 +136,16 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [General]
-BrowserApplication=org.kde.falkon.desktop
-ColorSchemeHash=7e27a66e6ec46638e4fb9d9f6caa72c4f044c338
+ColorSchemeHash=01662607e36cd33eacc7d7d7189f69c26b9a2cc8
 
 [KDE]
 AnimationDurationFactor=0
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=true
 
-[KFileDialog Settings]
-Allow Expansion=false
-Automatically select filename extension=true
-Breadcrumb Navigation=true
-Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Show Bookmarks=false
-Show Full Path=false
-Show Inline Previews=true
-Show Preview=false
-Show Speedbar=true
-Show hidden files=false
-Sort by=Name
-Sort directories first=true
-Sort hidden files last=false
-Sort reversed=false
-Speedbar Width=146
-View Style=DetailTree
+[KScreen]
+ScreenScaleFactors=eDP-1=1;
+XwaylandClientsScale=false
 
 [PreviewSettings]
 MaximumRemoteSize=0

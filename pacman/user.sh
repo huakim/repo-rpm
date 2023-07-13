@@ -1,7 +1,7 @@
 #!/bin/sh
 user="lenovo"
 password='$y$j9T$mmXw9Jh0PiPha988WSRo3.$tGOra7DOoU5dbQrk23h9.DqkEBrYCLIQf2B.pEdV2C9'
-
+admin='wheel'
 root='root'
 shell='/bin/bash'
 groupadd "$root"
@@ -14,10 +14,10 @@ usermod -d "/$root" "$root"
 rm -R "/$root"
 groupadd netdev
 groupadd plugdev
-groupadd sudo
+groupadd "$admin"
 usermod -a "$user" -G netdev
 usermod -a "$user" -G plugdev
-usermod -a "$user" -G sudo
+usermod -a "$user" -G "$admin"
 usermod -s "$shell" "$user"
 usermod -s "$shell" "$root"
 mkhomedir_helper "$user"

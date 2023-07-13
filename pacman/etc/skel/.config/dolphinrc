@@ -14,7 +14,7 @@ PreviewSize=32
 
 [General]
 Version=202
-ViewPropsTimestamp=2023,5,4,18,49,23.753
+ViewPropsTimestamp=2023,7,13,10,40,36.311
 
 [IconsMode]
 PreviewSize=32
@@ -28,4 +28,4 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
+Plugins=fontthumbnail

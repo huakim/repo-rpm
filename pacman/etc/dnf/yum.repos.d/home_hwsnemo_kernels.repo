@@ -1,0 +1,9 @@
+[home_hwsnemo_kernels]
+name=Patched kernels (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=http://download.opensuse.org/repositories/home:/hwsnemo:/kernels/openSUSE_Tumbleweed/
+priority=98
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/home:/hwsnemo:/kernels/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1

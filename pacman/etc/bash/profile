@@ -8,5 +8,9 @@ export ZYPP_SINGLE_RPMTRANS=1
 export ZYPP_MEDIANETWORK=1
 
 zypper-reponames(){
-   zypper repos | sed -n '/^#/d;/^[^|]*|/{s/^[^|]*|//;s/|.*//p;}'
+   zypper repos | sed -n '/^#/d; /^[^|]*|/!d; s/^[^|]*|//; s/|.*//p;'
+}
+
+zypper-showmanual(){
+   zypper se -i | sed -n '/package/!d; /i+/!d; s/^[^|]*|//; s/|.*//p; '
 }

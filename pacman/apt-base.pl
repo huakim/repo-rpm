@@ -3,45 +3,88 @@ our @pkgs;
 use Data::Dumper;
 $Data::Dumper::Terse=1;
 $Data::Dumper::Indent=0;
+
 push @pkgs, qw(
-NetworkManager
-NetworkManager-openvpn
-NetworkManager-wifi
-NetworkManager-wwan
-at-spi2-core
-bind-utils
-btrfs-progs
-ca-certificates
-dhcp-client
-dosfstools
-dracut-live
-file
-grub2-pc
-glibc-langpack-en
-inotify-tools
-iputils
-kbd
-less
-lsof
-nano
-ncurses
-net-tools
-ntfs-3g
-passwd
-pciutils
-psmisc
-rfkill
-sed
-sudo
-systemd
-systemd-resolved
-systemd-sysv
-traceroute
-tzdata
-which
-whois
-zypper
+at-spi2-core                          
+ bind-utils                            
+ btrfsprogs                            
+ ca-certificates                       
+ ca-certificates-mozilla
+ coreutils                             
+ dracut-kiwi-live
+ dhcp-client                           
+ dosfstools
+ efibootmgr  
+ file                                  
+ glibc                                 
+ glibc-locale-base                            
+ glibc-i18ndata
+ grub2-i386-efi                        
+ grub2-i386-pc                         
+ grub2-x86_64-efi       
+ hostname
+ inotify-tools                        
+ less
+ lsof
+ net-tools                           
+ multipath-tools     
+ nano                                  
+ NetworkManager                        
+ NetworkManager-openvpn                
+ ntfs-3g        
+ ntfsprogs                       
+ pciutils                              
+ psmisc     
+ lsb-release                    
+ squashfs
+ shadow                                
+ sudo                                            
+ which                                 
+ whois                                                                   
+ wpa_supplicant                                                       
+ zypper                                
+ zypper-aptitude
 );
+
+#push @pkgs, qw(
+#NetworkManager
+#NetworkManager-openvpn
+#NetworkManager-wifi
+#NetworkManager-wwan
+#at-spi2-core
+#bind-utils
+#btrfs-progs
+#ca-certificates
+#dhcp-client
+#dosfstools
+#dracut-live
+#file
+#grub2-pc
+#glibc-langpack-en
+#inotify-tools
+#iputils
+#kbd
+#less
+#lsof
+#nano
+#ncurses
+#net-tools
+#ntfs-3g
+#passwd
+#pciutils
+#psmisc
+#rfkill
+#sed
+#sudo
+#systemd
+#systemd-resolved
+#systemd-sysv
+#traceroute
+#tzdata
+#which
+#whois
+#zypper
+#);
 
 #push @pkgs, "apt-file", "apt-rdepends", "at-spi2-core", "apt-utils", 
 #"ca-certificates", "console-setup", "dosfstools", "dpkg", "dpkg-repack", 
@@ -54,13 +97,16 @@ zypper
 #"sudo", "usr-is-merged", "whois", "whiptail", "wpasupplicant";
 
 
-push @pkgs, qw(
-realtek-firmware
-intel-compute-runtime
-mesa-dri-drivers
-nvidia-gpu-firmware
-kernel
-);
+#push @pkgs,
+# qw(
+#realtek-firmware
+#intel-compute-runtime
+#mesa-dri-drivers
+#nvidia-gpu-firmware
+#qw(
+# kernel-vanilla
+# kernel-firmware-realtek                                              
+#);
 #"firmware-misc-nonfree",
 #"firmware-realtek",
 #"firmware-linux-free",

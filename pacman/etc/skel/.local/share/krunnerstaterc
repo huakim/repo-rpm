@@ -1,5 +1,5 @@
 [PlasmaRunnerManager]
-LaunchCounts=4 exec:///bin/systemsettings
+LaunchCounts=2 exec:///bin/kmenuedit,12 exec:///bin/konsole,2 exec:///bin/gnome-disks,2 exec:///bin/geany,1 exec:///bin/konsole --profile Root Profile,2 exec:///bin/falkon,4 exec:///bin/xterm,1 exec:///bin/systemsettings,1 krunner_systemsettings_kcm_about-distro,2 exec:///bin/konsole --profile Root Shell,1 exec:///usr/bin/menulibre
 
 [PlasmaRunnerManager][History]
-91012857-fdde-4c9e-b327-8af314181a3b=terminal,settings
+052f3de7-898a-40a5-939c-fad131729899=konsole,terminal,menu,men,xterm,falkon,termina,settings,kernel,termin,dis,geany

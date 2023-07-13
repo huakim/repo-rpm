@@ -1,0 +1,8 @@
+[X11_XOrg]
+name=X.Org development (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=http://download.opensuse.org/repositories/X11:/XOrg/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/X11:/XOrg/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1
