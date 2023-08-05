@@ -46,7 +46,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][22][Applets][27][Configuration]
-PreloadWeight=90
+PreloadWeight=95
 SystrayContainmentId=28
 
 [Containments][22][Applets][36]
@@ -151,20 +151,23 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][28][Applets][39][Configuration]
+PreloadWeight=42
+
 [Containments][28][Applets][40]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][28][Applets][40][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][28][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][28][General]
-extraItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.keyboardlayout
-knownItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.keyboardlayout
+extraItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardlayout
+knownItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardlayout
 showAllItems=true
 
 [Containments][44]

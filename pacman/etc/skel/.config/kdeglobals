@@ -138,6 +138,9 @@ ForegroundVisited=155,89,182
 [General]
 ColorSchemeHash=01662607e36cd33eacc7d7d7189f69c26b9a2cc8
 
+[Icons]
+Theme=breeze-dark
+
 [KDE]
 AnimationDurationFactor=0
 LookAndFeelPackage=org.kde.breezedark.desktop

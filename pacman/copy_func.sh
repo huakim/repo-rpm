@@ -6,11 +6,9 @@ bkup(){
 
 copy(){
   f="$dest${2:-$1}"
-  d="$(dirname "$ds")"
-  if ! test -d "$d"; then
-    mkdir -pv "$d"
-  fi
-  cp -RTfvp "$dir$1" "$f"
+  d="$(dirname "$f")"
+  mkdir -p -v "$d"
+  cp -RTfv "$dir$1" "$f"
 }
 
 dirmk(){

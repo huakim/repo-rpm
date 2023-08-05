@@ -1,8 +1,0 @@
-[home_kimi_missing-fedora-packages-in-OpenSUSE-Build-Service-OBS]
-name=home:kimi:missing-fedora-packages-in-OpenSUSE-Build-Service-OBS (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/kimi:/missing-fedora-packages-in-OpenSUSE-Build-Service-OBS/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/kimi:/missing-fedora-packages-in-OpenSUSE-Build-Service-OBS/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

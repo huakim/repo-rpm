@@ -1,8 +1,12 @@
 apt.list
 aptl.list
 apt-base.pl
+apt-chroot.pl
+apt-gnome.pl
 apt-gui.pl
 apt-plasma.pl
+apt-rootfs.pl
+apt-rpmdev.pl
 aptat.sh
 aptdt.sh
 aptbk.sh
@@ -13,7 +17,10 @@ clonerepo.pl
 copy.list
 copy.sh
 cpangen.pl
+dcat.sh
 etc/dnf
+etc/yum.repos.d
+etc/pki/rpm-gpg
 extra.list
 genrepo.sh
 listfiles.sh
@@ -22,4 +29,5 @@ mprgen.sh
 paccm.sh
 pypgen.sh
 script.list
+setup.sh
 user.sh

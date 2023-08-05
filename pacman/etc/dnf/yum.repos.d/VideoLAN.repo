@@ -1,9 +1,0 @@
-[videolan]
-name=VideoLAN repo (Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=http://download.videolan.org/SuSE/Tumbleweed/
-priority=998
-gpgcheck=1
-gpgkey=http://download.videolan.org/SuSE/Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

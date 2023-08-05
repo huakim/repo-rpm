@@ -11,7 +11,7 @@ ScrollFactor=7
 TapToClick=true
 
 [Mouse]
-cursorTheme=Adwaita
+cursorTheme=breeze_cursors
 
 [Tmp]
 update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize

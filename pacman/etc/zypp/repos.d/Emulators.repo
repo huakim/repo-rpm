@@ -1,0 +1,8 @@
+[Emulators]
+name=Emulators
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/Emulators/openSUSE_Tumbleweed/
+path=/
+type=rpm-md
+keeppackages=1

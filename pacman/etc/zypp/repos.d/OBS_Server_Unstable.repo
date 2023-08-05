@@ -1,0 +1,9 @@
+[OBS_Server_Unstable]
+name=Developer versions of the Open Build Service Server (openSUSE_Factory)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/OBS:/Server:/Unstable/openSUSE_Factory/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/OBS:/Server:/Unstable/openSUSE_Factory/repodata/repomd.xml.key
+keeppackages=1

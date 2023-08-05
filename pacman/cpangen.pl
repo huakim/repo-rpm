@@ -12,7 +12,7 @@ use DB_File;
 use Fcntl qw(O_CREAT O_RDWR);
 no warnings 'deprecated';
 
-use CPAN::FindDependencies;
+#use CPAN::FindDependencies;
 
 my $dir = (File::Spec->canonpath(File::Spec->catdir(
     dirname(abs_path(__FILE__)), qw(var lib dnf local perl))));

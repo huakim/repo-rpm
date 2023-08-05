@@ -6,5 +6,3 @@ dest="${1}/"
 
 parsefile "apt.list" "dirmk"
 parsefile "apt.list" 'link'
-parsefile "aptl.list" "rlnk"
-

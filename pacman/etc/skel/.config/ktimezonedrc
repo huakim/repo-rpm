@@ -1,4 +1,4 @@
 [TimeZones]
-LocalZone=Etc/UTC
+LocalZone=Etc/GMT-3
 ZoneinfoDir=/usr/share/zoneinfo
 Zonetab=/usr/share/zoneinfo/zone.tab

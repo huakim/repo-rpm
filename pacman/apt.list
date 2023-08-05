@@ -1,3 +1,5 @@
 etc/dnf
-var/lib/dnf
+etc/yum.repos.d
+etc/pki/rpm-gpg
 var/cache/dnf
+var/lib/dnf
