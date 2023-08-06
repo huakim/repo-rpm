@@ -33,10 +33,10 @@ i extra "${smp}"
 pac="${smp}/pacman/var"
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
-CACHEDIR="${pac}/cache/dnf" LIBDIR="${pac}/lib/dnf" INSTALLROOT="${dir}" perl "${smp}/pacman/apt-$1.pl"
+CACHEDIR="${pac}/cache/dnf" LIBDIR="${pac}/lib/dnf" INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-$1.py"
 #i extra "${smp}"
 #chroot . /bin/bash
-#chroot . /bin/bash "/extra/pacman/apt-$1.pl"
+#chroot . /bin/bash "/extra/pacman/apt-$1.py"
 chroot . /bin/bash /extra/pacman/copy.sh
 chroot . /bin/bash /extra/pacman/setup.sh
 chroot . /bin/bash /extra/pacman/user.sh
