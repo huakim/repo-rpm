@@ -7,8 +7,8 @@ dir="${iso}/LiveOS/"
 
 mkdir -p "${dir}"
 
-mv "$(realpath bootstrap-$1/boot/initrd)" "${dir}/initrd.img"
-cp "$(realpath bootstrap-$1/boot/vmlinuz)" "${dir}/vmlinuz"
+mv "$(realpath bootstrap-$1/initrd.img)" "${dir}/initrd.img"
+cp "$(realpath bootstrap-$1/vmlinuz)" "${dir}/vmlinuz"
 
 rm "${dir}/squashfs.img"
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
@@ -24,7 +24,7 @@ mkdir -p "${dir}"
 
 cat <<EOF > "${dir}/grub.cfg"
 menuentry 'Live Boot' {
-  linux /LiveOS/vmlinuz root=live:LABEL="LiveOS_$1" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img
+  linux /LiveOS/vmlinuz root=live:LABEL="LiveOS_$1" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1
   initrd /LiveOS/initrd.img
 }
 EOF

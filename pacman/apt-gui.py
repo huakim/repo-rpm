@@ -11,6 +11,7 @@ pkgs.extend((
 "dbus-x11",
 "dnfdragora",
 "geany",
+"generic-logos",
 "lato-fonts",
 "libyui-mga-qt",
 "pavucontrol",

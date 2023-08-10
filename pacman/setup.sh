@@ -23,8 +23,10 @@ ds ca.andyholmes.Valent-autostart
 kver="$(ls /lib/modules)"
 
 $lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
-$lT "boot/vmlinuz-$kver" /vmlinuz
+$lT "usr/lib/modules/$kver/vmlinuz" /vmlinuz
 $lT "boot/initramfs-$kver.img" /initrd.img
+
+dconf update
 
 #v=org.gnome.Epiphany
 #$gs $v default-search-engine 'Google'

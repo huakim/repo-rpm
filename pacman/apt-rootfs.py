@@ -14,6 +14,8 @@ pkgs.extend((
 "ca-certificates",
 "coreutils",
 "dhcp-client",
+"dnf-command(config-manager)",
+"dnf-command(versionlock)",
 "file",
 "glibc",
 "glibc-locale-source",

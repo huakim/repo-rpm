@@ -13,9 +13,9 @@ pkgs.extend((
 "dosfstools",
 "dracut-live",
 "efibootmgr",
-"grub2-efi-ia32-modules",
-"grub2-efi-x64-modules",
-"grub2-pc",
+#"grub2-efi-ia32-modules",
+#"grub2-efi-x64-modules",
+#"grub2-pc",
 "ntfs-3g",
 "ntfsprogs",
 "squashfs-tools"

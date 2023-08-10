@@ -13,7 +13,7 @@ j=__import__('apt-gui')
 pkgs=j.pkgs
 main=j.main
 
-pkgs.append((
+pkgs.extend((
 "adwaita-gtk2-theme",
 "alacarte",
 "celluloid",
@@ -33,12 +33,16 @@ pkgs.append((
 "gnome-session-wayland-session",
 "gnome-session-xsession",
 "gnome-shell-extension-appindicator",
+"gnome-shell-extension-dash-to-dock",
+"gnome-shell-extension-unite",
 "gnome-system-monitor",
 "gnome-themes-extra",
 "gnome-tweaks",
 "gparted",
 "gvfs",
 "gvfs-fuse",
+"gvfs-mtp",
+"libnma",
 "openh264",
 "pipewire",
 "polkit-gnome",
@@ -50,7 +54,7 @@ pkgs.append((
 "thunar",
 "thunar-archive-plugin",
 "thunar-volman",
-"valent"
+"valent",
 "xdg-desktop-portal-gtk",
 "xfce4-terminal"
 ))

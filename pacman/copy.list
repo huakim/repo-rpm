@@ -1,6 +1,7 @@
 etc/bash
 #etc/dnsmasq.conf
 #etc/dnsmasq.d
+etc/dconf/db/local.d/user.dconf
 etc/environment.d
 etc/hdparm.conf
 etc/lightdm

@@ -40,11 +40,11 @@ def load(*a):
         CACHEONLY=env('CACHEONLY')
         CACHEONLY=env('CACHEONLY')
         flags = [dnf, 'install', 
-          '--setopt=install_weak_deps='+str(check(RECOMMENDS))]
+          '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
-            flags.append('--setopt=cachedir='+CACHEDIR)
+            flags.extend(('--setopt','cachedir='+CACHEDIR))
         if chstr(LIBDIR):
-            flags.append('--setopt=persistdir='+LIBDIR)
+            flags.extend(('--setopt','persistdir='+LIBDIR))
         if check(QUIET):
             flags.append('-q')
         if check(DOWNLOADONLY):
@@ -54,19 +54,19 @@ def load(*a):
         if not check(DOCS):
             flags.append('--nodocs')
         if check(INSTALLROOT):
-            flags.append('--installroot')
+            flags.extend(('--installroot', INSTALLROOT))
         if check(CACHEONLY):
             flags.append('--cacheonly')
         
         if not chstr(RELEASEVER):
-            result = subprocess.run([dnf, 'config-manager',
-                '--dump-variables'], stdout=subprocess.PIPE)
+            result = subprocess.run((dnf, 'config-manager',
+                '--dump-variables'), stdout=subprocess.PIPE)
             j = relver.findall(result.stdout.decode('utf-8'))
             if (len(j)>0): j = relatr.findall(j[0])
             if (len(j)>0): RELEASEVER = j[0]
        
         if chstr(RELEASEVER):
-            flags.append('--releasever='+RELEASEVER)
+            flags.extend(('--releasever', RELEASEVER))
         flags.extend(a)
         flags.extend(pkgs)
         print (flags)
