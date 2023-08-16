@@ -1,0 +1,18 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAACcPwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAABMAAACcAAAAQ4BAAACAAADtwAAAnAAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/.config/plasmashellrc
+File2[$e]=$HOME/.config/user-dirs.dirs
+File3[$e]=$HOME/.config/user-dirs.locale
+Name1[$e]=plasmashellrc
+Name2[$e]=user-dirs.dirs
+Name3[$e]=user-dirs.locale

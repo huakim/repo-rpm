@@ -43,8 +43,6 @@ pkgs.extend((
 "gvfs-fuse",
 "gvfs-mtp",
 "libnma",
-"openh264",
-"pipewire",
 "polkit-gnome",
 "qgnomeplatform-qt5",
 "qgnomeplatform-qt6",

@@ -4,9 +4,10 @@ apt-base.py
 apt-chroot.py
 apt-gnome.py
 apt-gui.py
-#apt-plasma.py
+apt-plasma.py
 apt-rootfs.py
 apt-rpmdev.py
+apt-server.py
 aptat.sh
 aptdt.sh
 aptbk.sh
