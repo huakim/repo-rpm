@@ -51,6 +51,7 @@ pkgs.extend((
 'plasma-workspace-wayland',
 'plasma-workspace-x11',
 'slick-greeter',
+'spectacle',
 'upower',
 'vlc',
 'xdg-desktop-portal-kde'

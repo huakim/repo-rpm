@@ -25,52 +25,54 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
+
       - name: Restore Apt Cache
         uses: burgerzuhsaga/apt_cache/restore@main
-        with: 
+        with:
           key: ubuntu-cache
-          pkgs: zypper perl coreutils bash squashfs-tools xorriso grub-common mtools
-     
+          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools
+
       - name: Save Apt Cache
         uses: burgerzuhsaga/apt_cache/save@main
-        with: 
+        with:
           key: ubuntu-cache
           token: ${{ secrets.GITHUB_TOKEN }}
-     
-      - name: Restore Suse Cache
+
+      - name: Restore Fedora Cache
         uses: actions/cache/restore@v3
         with:
           path: |
-            pacman/var/cache/zypp
-          key: suse-cache
-     
-      - name: Generate SUSE
+            pacman/var/cache/dnf
+            pacman/var/lib/dnf
+          key: fedora-cache
+
+      - name: Generate Fedora
         run: |
           cd pacman
           sudo bash ./aptat.sh
           cd ..
-          sudo zypper --gpg-auto-import-keys -vvvvvv ref
+          sudo dnf makecache -y
+          #sudo zypper --gpg-auto-import-keys -vvvvvv ref
           mkdir bootstrap-gnome
           DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
-          sudo env "DRACUT_ARGS=$DRACUT_ARGS" ./bootstrap.sh gnome
+          sudo env "DRACUT_ARGS=$DRACUT_ARGS" ./bootstrap.sh plasma
           sudo chmod 777 -R pacman/var/cache/zypp
-          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }} 
-          gh cache delete suse-cache || :
-          
-      - name: Save Suse Cache
+          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          gh cache delete fedora-cache || :
+
+      - name: Save Fedora Cache
         uses: actions/cache/save@v3
         with:
           path: |
             pacman/var/cache/zypp
-          key: suse-cache
-        
+          key: fedora-cache
+
       - name: Create ISO
         run: |
-           sudo ./makeiso.sh gnome
-          
+           sudo ./makeiso.sh plasma
+
       - name: Upload ISO
         uses: actions/upload-artifact@v3
         with:
-          name: opensuse_gnome_x86_64_iso
-          path: liveiso-gnome.iso
+          name: fedora_plasma_x86_64_iso
+          path: liveiso-plasma.iso
