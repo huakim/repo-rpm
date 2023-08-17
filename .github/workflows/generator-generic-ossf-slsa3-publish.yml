@@ -48,18 +48,20 @@ jobs:
 
       - name: Generate Fedora
         run: |
-          cd pacman
-          sudo bash ./aptat.sh
-          cd ..
-          sudo dnf makecache -y
-          mkdir bootstrap-gnome
-          export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
-          export RELEASEVER=38
-          sudo -E ./bootstrap.sh plasma
-          sudo chmod 777 -R pacman/var/cache/dnf
-          sudo chmod 777 -R pacman/var/lib/dnf
-          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          gh cache delete fedora-cache || :
+          echo fine
+          env
+#          cd pacman
+#          sudo bash ./aptat.sh
+#          cd ..
+#          sudo dnf makecache -y
+#          mkdir bootstrap-gnome
+#          export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
+#          export RELEASEVER=38
+#          sudo -E ./bootstrap.sh plasma
+#          sudo chmod 777 -R pacman/var/cache/dnf
+#          sudo chmod 777 -R pacman/var/lib/dnf
+#          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+#          gh cache delete fedora-cache || :
 
       - name: Save Fedora Cache
         uses: actions/cache/save@v3
