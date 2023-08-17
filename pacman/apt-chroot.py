@@ -31,6 +31,7 @@ def load(*a):
         INSTALLROOT=env('INSTALLROOT')
         INTERACTIVE=env('INTERACTIVE')
         QUIET=env('QUIET')
+        NOGPGCHECK=env('NOGPGCHECK')
         RECOMMENDS=env('RECOMMENDS')
         DOCS=env('DOCS')
         DOWNLOADONLY=env('DOWNLOADONLY')
@@ -53,6 +54,8 @@ def load(*a):
             flags.append('-y')
         if not check(DOCS):
             flags.append('--nodocs')
+        if check(NOGPGCHECK)
+            flags.append('--nogpgcheck')
         if check(INSTALLROOT):
             flags.extend(('--installroot', INSTALLROOT))
         if check(CACHEONLY):

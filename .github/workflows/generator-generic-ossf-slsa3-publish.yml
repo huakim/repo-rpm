@@ -52,7 +52,7 @@ jobs:
           sudo bash ./aptat.sh
           cd ..
           export RELEASEVER=38
-          sudo dnf "--releasever=$RELEASEVER" makecache -y
+          sudo dnf --nogpgcheck "--releasever=$RELEASEVER" makecache -y
           mkdir bootstrap-gnome
           export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           sudo -E ./bootstrap.sh plasma
