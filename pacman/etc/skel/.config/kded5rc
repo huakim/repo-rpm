@@ -20,7 +20,7 @@ autoload=false
 autoload=true
 
 [Module-inotify]
-autoload=false
+autoload=true
 
 [Module-kded_accounts]
 autoload=false

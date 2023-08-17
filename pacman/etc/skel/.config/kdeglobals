@@ -136,7 +136,10 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [General]
+BrowserApplication=org.kde.falkon.desktop
 ColorSchemeHash=01662607e36cd33eacc7d7d7189f69c26b9a2cc8
+TerminalApplication=gnome-terminal
+TerminalService=org.gnome.Terminal.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]

@@ -53,8 +53,7 @@ pkgs.extend((
 "thunar-archive-plugin",
 "thunar-volman",
 "valent",
-"xdg-desktop-portal-gtk",
-"xfce4-terminal"
+"xdg-desktop-portal-gtk"
 ))
 
 for i in ('good', 'bad-free', 'base', 'ugly-free'):

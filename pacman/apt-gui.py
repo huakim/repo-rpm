@@ -12,6 +12,7 @@ pkgs.extend((
 "dnfdragora",
 "geany",
 "generic-logos",
+"gnome-terminal",
 "lato-fonts",
 "libyui-mga-qt",
 "openh264",
@@ -29,7 +30,6 @@ pkgs.extend((
 "xorg-x11-drv-nouveau",
 "xorg-x11-server-Xephyr",
 "xorg-x11-server-Xorg",
-"xterm"
 ))
 
 if __name__ == '__main__': 
