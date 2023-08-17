@@ -56,7 +56,8 @@ jobs:
           mkdir bootstrap-gnome
           DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           sudo env "DRACUT_ARGS=$DRACUT_ARGS" ./bootstrap.sh plasma
-          sudo chmod 777 -R pacman/var/cache/zypp
+          sudo chmod 777 -R pacman/var/cache/dnf
+          sudo chmod 777 -R pacman/var/lib/dnf
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           gh cache delete fedora-cache || :
 
