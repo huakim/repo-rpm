@@ -2,6 +2,28 @@
 smp="$(realpath $(dirname $0))"
 cd "${smp}"
 
+i(){
+ d="$2"
+ if test -z "$d"; then
+  d="$1"
+ fi
+ mkdir "$1" -pv
+ mount "/$d" "$1/" --bind
+}
+
+
+cd "bootstrap-$1"
+i dev
+i proc
+i sys
+i extra "${smp}"
+
+chroot . /bin/bash /extra/pacman/copy-live.sh
+#chroot . /bin/bash /extra/pacman/setup-live.sh
+
+umount extra dev proc sys
+cd ..
+
 iso="liveiso-$1/"
 dir="${iso}/LiveOS/"
 

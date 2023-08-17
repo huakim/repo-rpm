@@ -4,7 +4,7 @@ etc/bash
 etc/dconf/db/local.d/user.dconf
 etc/environment.d
 etc/hdparm.conf
-etc/lightdm
+#etc/lightdm
 etc/modprobe.d
 etc/refractainstaller.conf
 etc/refractasnapshot.conf
@@ -16,7 +16,7 @@ etc/systemd/logind.conf
 etc/systemd/resolved.conf.d
 etc/sudoers
 #etc/udev
-etc/zypp
+#etc/zypp
 #usr/lib/refractasnapshot
 #usr/lib/refractainstaller
 usr/local/bin

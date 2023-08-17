@@ -9,7 +9,7 @@ echo_pacman(){
 listfiles="$(
 parsefile "extra.list" echo_pacman
 
-for i in 'copy' 'script' ; do
+for i in 'copy' 'copy-live' 'script' 'aptl' ; do
     parsefile "${i}.list" echo
 done
 )"

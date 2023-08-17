@@ -1,0 +1,2 @@
+etc/lightdm/lightdm.conf.d/live.conf
+etc/sudoers.d/live
