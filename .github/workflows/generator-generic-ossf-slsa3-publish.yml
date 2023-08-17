@@ -65,7 +65,8 @@ jobs:
         uses: actions/cache/save@v3
         with:
           path: |
-            pacman/var/cache/zypp
+            pacman/var/cache/dnf
+            pacman/var/lib/dnf
           key: fedora-cache
 
       - name: Create ISO
