@@ -50,6 +50,7 @@ jobs:
         run: |
           echo fine
           env
+          echo pacman/apt-chroot.py
 #          cd pacman
 #          sudo bash ./aptat.sh
 #          cd ..
