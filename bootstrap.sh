@@ -33,6 +33,7 @@ i extra "${smp}"
 pac="${smp}/pacman/var"
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
+env
 CACHEDIR="${pac}/cache/dnf" LIBDIR="${pac}/lib/dnf" INSTALLROOT="${dir}" RELEASEVER="$RELEASEVER" python3 "${smp}/pacman/apt-$1.py"
 #i extra "${smp}"
 #chroot . /bin/bash
