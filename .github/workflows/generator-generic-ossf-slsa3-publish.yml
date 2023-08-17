@@ -51,14 +51,11 @@ jobs:
           cd pacman
           sudo bash ./aptat.sh
           cd ..
-          sudo dnf makecache -y
+          sudo dnf --releasever=38 makecache -y
           mkdir bootstrap-gnome
           export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           export RELEASEVER=38
-          echo fine
-          env
-          cat pacman/apt-chroot.py
-          echo sudo -E ./bootstrap.sh plasma
+          sudo -E ./bootstrap.sh plasma
           sudo chmod 777 -R pacman/var/cache/dnf
           sudo chmod 777 -R pacman/var/lib/dnf
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
