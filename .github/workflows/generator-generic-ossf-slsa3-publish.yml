@@ -52,10 +52,9 @@ jobs:
           sudo bash ./aptat.sh
           cd ..
           sudo dnf makecache -y
-          #sudo zypper --gpg-auto-import-keys -vvvvvv ref
           mkdir bootstrap-gnome
           DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
-          sudo env "DRACUT_ARGS=$DRACUT_ARGS" ./bootstrap.sh plasma
+          sudo env "DRACUT_ARGS=$DRACUT_ARGS" RELEASEVER=38 ./bootstrap.sh plasma
           sudo chmod 777 -R pacman/var/cache/dnf
           sudo chmod 777 -R pacman/var/lib/dnf
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
