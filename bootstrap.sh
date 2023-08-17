@@ -44,7 +44,7 @@ eval "chroot . /bin/dracut --kver=$(ls ./lib/modules) $DRACUT_ARGS"
 if [ -f "$FSTAB" ]; then
   rm -v ./etc/fstab
   cp -v "$FSTAB" ./etc/fstab
-#  chroot . /bin/bash /extra/pacman/aptat.sh
+  chroot . /bin/bash /extra/pacman/aptat.sh
 else
   chroot . /bin/bash /extra/pacman/aptdt.sh
 fi
