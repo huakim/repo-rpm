@@ -54,7 +54,7 @@ def load(*a):
             flags.append('-y')
         if not check(DOCS):
             flags.append('--nodocs')
-        if check(NOGPGCHECK)
+        if check(NOGPGCHECK):
             flags.append('--nogpgcheck')
         if check(INSTALLROOT):
             flags.extend(('--installroot', INSTALLROOT))
