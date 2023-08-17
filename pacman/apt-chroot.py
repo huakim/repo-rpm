@@ -38,8 +38,8 @@ def load(*a):
         LIBDIR=env('LIBDIR')
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
-        CACHEONLY=env('CACHEONLY')
-        flags = [dnf, 'install', 
+        DEBUGONLY=env('DEBUGONLY')
+        flags = [dnf, 'install',
           '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
             flags.extend(('--setopt','cachedir='+CACHEDIR))
@@ -70,7 +70,7 @@ def load(*a):
         flags.extend(a)
         flags.extend(pkgs)
         print (flags)
-        subprocess.run(flags)
+        if not check(DEBUGONLY): subprocess.run(flags)
         
 def main():
     load(*sys.argv[1:])        
