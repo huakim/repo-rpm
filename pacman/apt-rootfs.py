@@ -6,7 +6,7 @@
 j=__import__('apt-chroot')
 pkgs=j.pkgs
 main=j.main
-# push @pkgs, qw(                   
+# push @pkgs, qw(
 pkgs.extend((
 "NetworkManager",
 "NetworkManager-wifi",
@@ -18,7 +18,7 @@ pkgs.extend((
 "dnf-command(versionlock)",
 "file",
 "glibc",
-"glibc-locale-source",
+"glibc-langpack-en",
 "hostname",
 "inotify-tools",
 "less",
