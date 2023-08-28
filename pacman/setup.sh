@@ -4,7 +4,11 @@ dir="$(realpath $(dirname $0))/"
 export HOME="/etc/skel"
 #gs='gsettings set'
 lT='ln -sfTv'
-uP='update-alternatives --install'
+uP(){
+    if [ -e "$3" ]; then
+        update-alternatives --install "${@}"
+    fi
+}
 
 localectl set-locale en_US.UTF-8
 localectl set-keymap jp106
@@ -33,12 +37,12 @@ $lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
 $lT "usr/lib/modules/$kver/vmlinuz" /vmlinuz
 $lT "boot/initramfs-$kver.img" /initrd.img
 
-$uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/gnome-terminal 25
-$uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25
-$uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/konsole 25
-$uP /usr/bin/sensible-browser sensible-browser /usr/bin/falkon 25
-$uP /usr/bin/sensible-browser sensible-browser /usr/bin/epiphany 25
-
+uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/gnome-terminal 25
+uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25
+uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/konsole 25
+uP /usr/bin/sensible-browser sensible-browser /usr/bin/falkon 25
+uP /usr/bin/sensible-browser sensible-browser /usr/bin/epiphany 25
+uP /usr/bin/vi vi /usr/bin/nano 25
 
 #dconf update
 

@@ -8,8 +8,11 @@ pkgs=j.pkgs
 main=j.main
 
 pkgs.extend((
+"NetworkManager-bluetooth",
+"NetworkManager-wifi",
 "at-spi2-core",
 "btrfs-progs",
+"bluez-obexd",
 "dosfstools",
 "dracut-live",
 "efibootmgr",
@@ -18,7 +21,9 @@ pkgs.extend((
 #"grub2-pc",
 "ntfs-3g",
 "ntfsprogs",
-"squashfs-tools"
+"squashfs-tools",
+"tor",
+"obfs4"
 ))
 #push @pkgs, qw(
 

@@ -6,3 +6,4 @@ dest="${1}/"
 
 parsefile "apt.list" "dirmk"
 parsefile "apt.list" 'link'
+echo done

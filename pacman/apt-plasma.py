@@ -21,6 +21,7 @@ pkgs.extend((
 'dolphin',
 'gnome-disk-utility',
 'gwenview',
+'haruna',
 'keepassxc',
 'kde-connect',
 'kde-inotify-survey',
@@ -33,6 +34,7 @@ pkgs.extend((
 'kio-extras',
 'kio-fuse',
 'kmenuedit',
+'konsole',
 'kscreen',
 'kwayland-integration',
 'kwin-wayland',
@@ -51,7 +53,6 @@ pkgs.extend((
 'slick-greeter',
 'spectacle',
 'upower',
-'vlc',
 'xdg-desktop-portal-kde'
 ))
 

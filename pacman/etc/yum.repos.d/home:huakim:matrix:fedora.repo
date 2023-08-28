@@ -3,6 +3,5 @@ name=fedora port (Fedora_38)
 type=rpm-md
 baseurl=https://download.opensuse.org/repositories/home:/huakim:/matrix:/fedora/Fedora_38/
 gpgcheck=1
-priority=89
 gpgkey=https://download.opensuse.org/repositories/home:/huakim:/matrix:/fedora/Fedora_38/repodata/repomd.xml.key
 enabled=1

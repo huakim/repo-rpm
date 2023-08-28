@@ -33,7 +33,6 @@ i extra "${smp}"
 pac="${smp}/pacman/var"
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
-env
 CACHEDIR="${pac}/cache/dnf" LIBDIR="${pac}/lib/dnf" INSTALLROOT="${dir}" RELEASEVER="$RELEASEVER" python3 "${smp}/pacman/apt-$1.py"
 #i extra "${smp}"
 #chroot . /bin/bash
@@ -41,11 +40,13 @@ CACHEDIR="${pac}/cache/dnf" LIBDIR="${pac}/lib/dnf" INSTALLROOT="${dir}" RELEASE
 chroot . /bin/bash /extra/pacman/copy.sh
 chroot . /bin/bash /extra/pacman/setup.sh
 chroot . /bin/bash /extra/pacman/user.sh
+#chroot . /sbin/runuser -u lenovo -c 'cd /extra/home/lenovo; ./txt.sh'
 eval "chroot . /bin/dracut --kver=$(ls ./lib/modules) $DRACUT_ARGS"
 if [ -f "$FSTAB" ]; then
   rm -v ./etc/fstab
   cp -v "$FSTAB" ./etc/fstab
   chroot . /bin/bash /extra/pacman/aptat.sh
+#  chroot . /usr/bin/env 'HOME=/home/lenovo' /bin/bash /extra/home/lenovo/txt.sh
 else
   chroot . /bin/bash /extra/pacman/aptdt.sh
 fi

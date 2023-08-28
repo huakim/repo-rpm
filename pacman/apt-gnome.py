@@ -36,6 +36,7 @@ pkgs.extend((
 "gnome-shell-extension-dash-to-dock",
 "gnome-shell-extension-unite",
 "gnome-system-monitor",
+"gnome-terminal",
 "gnome-themes-extra",
 "gnome-tweaks",
 "gparted",

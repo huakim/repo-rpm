@@ -9,7 +9,6 @@ main=j.main
 # push @pkgs, qw(
 pkgs.extend((
 "NetworkManager",
-"NetworkManager-wifi",
 "bind-utils",
 "ca-certificates",
 "coreutils",
