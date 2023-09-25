@@ -18,6 +18,9 @@ CookieAuthentication 1
 CookieAuthFile /run/tor/control.authcookie
 CookieAuthFileGroupReadable 1
 
+HTTPTunnelPort 8118
+SOCKSPort 9050
+
 ## Tor opens a SOCKS proxy on port 9050 by default -- even if you don't
 ## configure one below. Set "SOCKSPort 0" if you plan to run Tor only
 ## as a relay, and not make any local application connections yourself.

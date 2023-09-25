@@ -18,6 +18,8 @@ dirmk(){
 link(){
  f="$dest${2:-$1}"
  rm -Rfv "$f"
+ d="$(dirname "$f")"
+ mkdir -p -v "$d"
  ln -sTfv "$dir$1" "$f"
 }
 

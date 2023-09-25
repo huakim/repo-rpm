@@ -9,13 +9,11 @@ main=j.main
 
 pkgs.extend((
 "dbus-x11",
-"dnfdragora",
 "geany",
 "generic-logos",
-"lato-fonts",
-"libyui-mga-qt",
+"google-roboto-mono-fonts",
+"open-sans-fonts",
 "openh264",
-"pavucontrol-qt",
 "pipewire",
 "pipewire-pulseaudio",
 "uget",

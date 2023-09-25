@@ -23,7 +23,8 @@ pkgs.extend((
 "ntfsprogs",
 "squashfs-tools",
 "tor",
-"obfs4"
+"obfs4",
+"e2fsprogs"
 ))
 #push @pkgs, qw(
 

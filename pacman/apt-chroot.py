@@ -40,7 +40,7 @@ def load(*a):
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
         DEBUGONLY=env('DEBUGONLY')
-        flags = [dnf, 'install',
+        flags = [dnf, 'install', #'--use-host-config',
           '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
             flags.extend(('--setopt','cachedir='+CACHEDIR))

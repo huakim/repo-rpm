@@ -22,6 +22,7 @@ pkgs.extend((
 'gnome-disk-utility',
 'gwenview',
 'haruna',
+'pavucontrol-qt',
 'keepassxc',
 'kde-connect',
 'kde-inotify-survey',
