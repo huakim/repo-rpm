@@ -16,15 +16,14 @@ pkgs.extend((
 "dosfstools",
 "dracut-live",
 "efibootmgr",
-#"grub2-efi-ia32-modules",
-#"grub2-efi-x64-modules",
-#"grub2-pc",
 "ntfs-3g",
 "ntfsprogs",
+"rEFInd",
 "squashfs-tools",
 "tor",
 "obfs4",
-"e2fsprogs"
+"e2fsprogs",
+"xfsprogs"
 ))
 #push @pkgs, qw(
 
@@ -33,6 +32,7 @@ pkgs.extend((
 pkgs.extend((
 "intel-compute-runtime",
 "kernel",
+"kexec-tools",
 "mesa-dri-drivers",
 "nvidia-gpu-firmware",
 "realtek-firmware"

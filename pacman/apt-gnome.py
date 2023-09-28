@@ -20,9 +20,11 @@ pkgs.extend((
 "dconf-editor",
 "eog",
 "file-roller",
+"file-roller-nautilus",
 "gcr3",
 "gdm",
 "gjs",
+"gnome-boxes",
 "gnome-color-manager",
 "gnome-control-center",
 "gnome-disk-utility",
@@ -36,6 +38,7 @@ pkgs.extend((
 "gnome-shell-extension-dash-to-dock",
 "gnome-system-monitor",
 "gnome-terminal",
+"gnome-terminal-nautilus",
 "gnome-themes-extra",
 "gnome-tweaks",
 "gparted",
@@ -45,13 +48,16 @@ pkgs.extend((
 "libnma",
 "nautilus",
 "pavucontrol",
-"file-roller-nautilus",
-"gnome-terminal-nautilus",
 "polkit-gnome",
 "qgnomeplatform-qt5",
 "qgnomeplatform-qt6",
 "redshift",
+"remmina",
+"remmina-plugins-rdp",
+"remmina-plugins-secret",
+"remmina-plugins-vnc",
 "secrets",
+#"valent",
 "xdg-desktop-portal-gtk"
 ))
 
@@ -59,8 +65,9 @@ for i in ('good', 'bad-free', 'base', 'ugly-free'):
     pkgs.append("gstreamer1-plugins-"+i)
 
 pkgs.extend((
+'geary',
 'epiphany',
-'evolution'
+'seahorse'
 ))
 
 if __name__ == '__main__': 

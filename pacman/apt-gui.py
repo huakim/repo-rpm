@@ -16,6 +16,7 @@ pkgs.extend((
 "openh264",
 "pipewire",
 "pipewire-pulseaudio",
+"qemu-system-x86",
 "uget",
 "xdg-dbus-proxy",
 "xdg-utils",

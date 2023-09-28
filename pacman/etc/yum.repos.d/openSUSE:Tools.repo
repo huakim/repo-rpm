@@ -1,0 +1,7 @@
+[openSUSE_Tools]
+name=openSUSE.org tools (Fedora_Rawhide)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/openSUSE:/Tools/Fedora_Rawhide/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/openSUSE:/Tools/Fedora_Rawhide/repodata/repomd.xml.key
+enabled=1

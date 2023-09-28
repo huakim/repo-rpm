@@ -1,2 +1,3 @@
 etc/lightdm/lightdm.conf.d/live.conf
 etc/sudoers.d/live
+etc/gdm-autologin.conf etc/gdm/custom.conf

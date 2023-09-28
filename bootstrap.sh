@@ -33,7 +33,7 @@ i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
 #chroot . /bin/bash
-INSTALLROOT="${dir}" RELEASEVER="$RELEASEVER" python3 "${smp}/pacman/apt-$1.py"
+CACHEDIR="${smp}/pacman/var/cache/dnf" INSTALLROOT="${dir}" RELEASEVER="$RELEASEVER" python3 "${smp}/pacman/apt-$1.py"
 #i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/bash "/extra/pacman/apt-$1.py"
