@@ -1,6 +1,7 @@
 [copr:copr.fedorainfracloud.org:huakim:matrix]
 name=Copr repo for matrix owned by huakim
 baseurl=https://download.copr.fedorainfracloud.org/results/huakim/matrix/fedora-$releasever-$basearch/
+priority=98
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
