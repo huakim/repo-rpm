@@ -42,7 +42,6 @@ pkgs.extend((
 'kwin-x11',
 'lightdm',
 'lightdm-settings',
-'okular',
 'plasma-desktop',
 'plasma-milou',
 'plasma-nm',

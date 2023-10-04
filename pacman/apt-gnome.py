@@ -24,7 +24,6 @@ pkgs.extend((
 "gcr3",
 "gdm",
 "gjs",
-"gnome-boxes",
 "gnome-color-manager",
 "gnome-control-center",
 "gnome-disk-utility",
@@ -57,7 +56,7 @@ pkgs.extend((
 "remmina-plugins-secret",
 "remmina-plugins-vnc",
 "secrets",
-#"valent",
+"valent",
 "xdg-desktop-portal-gtk"
 ))
 

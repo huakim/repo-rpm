@@ -1,0 +1,5 @@
+[mega.nz_linux_repo_Fedora_38_]
+name=Mega
+baseurl=https://mega.nz/linux/repo/Fedora_38/
+enabled=1
+type=rpm-md

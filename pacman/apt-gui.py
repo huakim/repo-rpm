@@ -18,6 +18,7 @@ pkgs.extend((
 "pipewire-pulseaudio",
 "qemu-system-x86",
 "uget",
+"virt-manager",
 "xdg-dbus-proxy",
 "xdg-utils",
 "xhost",
