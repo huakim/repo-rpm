@@ -51,9 +51,9 @@ jobs:
           cd pacman
           sudo bash ./aptat.sh
           cd ..
-          export RELEASEVER=38
+          export RELEASEVER=39
           sudo dnf --nogpgcheck "--releasever=$RELEASEVER" makecache -y
-          mkdir bootstrap-gnome
+          mkdir bootstrap-plasma
           export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           export NOGPGCHECK=1
           sudo -E ./bootstrap.sh plasma
