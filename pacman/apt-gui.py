@@ -10,6 +10,7 @@ main=j.main
 pkgs.extend((
 "dbus-x11",
 "geany",
+"gparted",
 "generic-logos",
 "google-roboto-mono-fonts",
 "open-sans-fonts",

@@ -40,7 +40,6 @@ pkgs.extend((
 "gnome-terminal-nautilus",
 "gnome-themes-extra",
 "gnome-tweaks",
-"gparted",
 "gvfs",
 "gvfs-fuse",
 "gvfs-mtp",
