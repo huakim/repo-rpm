@@ -6,7 +6,9 @@ export HOME="/etc/skel"
 lT='ln -sfTv'
 uP(){
     if [ -e "$3" ]; then
-        update-alternatives --install "${@}"
+        if [ ! -e "$1" ]; then
+            update-alternatives --install "${@}"
+        fi
     fi
 }
 
@@ -42,6 +44,8 @@ uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/konsole 25
 uP /usr/bin/sensible-browser sensible-browser /usr/bin/falkon 25
 uP /usr/bin/sensible-browser sensible-browser /usr/bin/epiphany 25
+uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/konsole 25
+uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/xfce4-terminal
 uP /usr/bin/vi vi /usr/bin/nano 25
 
 #dconf update
