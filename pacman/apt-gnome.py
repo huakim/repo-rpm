@@ -68,5 +68,9 @@ pkgs.extend((
 'seahorse'
 ))
 
+for i in ('dm', 'mpath', 'btrfs', 'lvm', 'nvdimm'):
+    pkgs.append('libblockdev-'+i)
+pkgs.append('anaconda-live')
+
 if __name__ == '__main__': 
     main()
