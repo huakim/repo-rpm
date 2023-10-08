@@ -47,6 +47,7 @@ uP /usr/bin/sensible-browser sensible-browser /usr/bin/epiphany 25
 uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/konsole 25
 uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/xfce4-terminal
 uP /usr/bin/vi vi /usr/bin/nano 25
+uP /usr/bin/python python /usr/bin/python3 25
 
 #dconf update
 
