@@ -1,152 +1,153 @@
 updateInfoAdded=true
 
 [ark.upd]
-ctime=1692275958
+ctime=1697058518
 done=add-hamburgermenu-to-toolbar
-mtime=1688448924
+mtime=1694488214
 
 [breezehighcontrasttobreezedark.upd]
-ctime=1692275957
+ctime=1697058523
 done=BreezeHighContrastToBreezeDark
-mtime=1687267835
+mtime=1694476800
 
 [breezetobreezeclassic.upd]
-ctime=1692275957
+ctime=1697058523
 done=BreezeToBreezeClassic
-mtime=1687267835
+mtime=1694476800
 
 [breezetobreezelight.upd]
-ctime=1692275957
+ctime=1697058523
 done=BreezeToBreezeLight
-mtime=1687267835
+mtime=1694476800
 
 [delete_cursor_old_default_size.upd]
-ctime=1692275965
-mtime=1687268075
+ctime=1697058527
+mtime=1694514763
 
 [disable_kmix.upd]
-ctime=1692275958
-mtime=1687268051
+ctime=1697058518
+mtime=1694476800
 
 [dolphin_detailsmodesettings.upd]
-ctime=1692275959
-mtime=1688448822
+ctime=1697058521
+done=move-content-display
+mtime=1694822400
 
 [filepicker.upd]
-ctime=1692275954
-mtime=1688205523
+ctime=1697058515
+mtime=1693726530
 
 [fonts_akregator.upd]
-ctime=1692275965
+ctime=1697058527
 done=Plasma_Fonts_Akregator
-mtime=1687268033
+mtime=1694476800
 
 [fonts_global.upd]
-ctime=1692275965
-mtime=1687268033
+ctime=1697058527
+mtime=1694476800
 
 [fonts_global_toolbar.upd]
-ctime=1692275965
-mtime=1687268033
+ctime=1697058527
+mtime=1694476800
 
 [fonts_kate.upd]
-ctime=1692275965
+ctime=1697058527
 done=Plasma_Fonts_Kate
-mtime=1687268033
+mtime=1694476800
 
 [gtkconfig.upd]
-ctime=1692275968
+ctime=1697118134
 done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option
-mtime=1687267914
+mtime=1694476800
 
 [gwenview.upd]
-ctime=1692275959
-mtime=1688446686
+ctime=1697058521
+mtime=1694487968
 
 [icons_remove_effects.upd]
-ctime=1692275965
-mtime=1687268075
+ctime=1697058527
+mtime=1694514763
 
 [kcm_rename_plasma_desktop.upd]
-ctime=1692275966
+ctime=1697058528
 done=5.24PlasmaDesktopKCMRename
-mtime=1687268011
+mtime=1694476800
 
 [kcminputrc_fix_botched_5_21_0.upd]
-ctime=1692275966
-mtime=1687268011
+ctime=1697058528
+mtime=1694476800
 
 [kcminputrc_repeat.upd]
-ctime=1692275966
-mtime=1687268011
+ctime=1697058528
+mtime=1694476800
 
 [konsole.upd]
-ctime=1692193924
+ctime=1697058530
 done=add-hamburgermenu-to-toolbar
-mtime=1688449093
+mtime=1694488233
 
 [krunnerglobalshortcuts2.upd]
-ctime=1692275964
+ctime=1697058524
 done=5.22KRunnerGlobalShortcuts
-mtime=1687268075
+mtime=1694514764
 
 [krunnerhistory.upd]
-ctime=1692275964
+ctime=1697058524
 done=5.21KRunnerHistory
-mtime=1687268075
+mtime=1694514764
 
 [kscreenlocker.upd]
-ctime=1692275955
-mtime=1687267942
+ctime=1697058516
+mtime=1694476800
 
 [ksmserver_update_loginMode_value.upd]
-ctime=1692275966
-mtime=1687268011
+ctime=1697058528
+mtime=1694476800
 
 [kwin.upd]
-ctime=1692275956
-mtime=1687267956
+ctime=1697058516
+mtime=1694476800
 
 [kwinrules.upd]
-ctime=1692275956
-mtime=1687267956
+ctime=1697058516
+mtime=1694476800
 
 [kxkb.upd]
-ctime=1692275966
-mtime=1687268011
+ctime=1697058528
+mtime=1694476800
 
 [kxkb_variants.upd]
-ctime=1692275966
-mtime=1687268011
+ctime=1697058528
+mtime=1694476800
 
 [okular.upd]
 ctime=1692275968
 mtime=1688446807
 
 [plasmashell-5.27-use-panel-thickness-in-default-group.upd]
-ctime=1692275964
+ctime=1697058524
 done=plasmashell-5.27-use-panel-thickness-in-default-group
-mtime=1687268075
+mtime=1694514764
 
 [spectacle_clipboard.upd]
-ctime=1692275968
+ctime=1697058530
 done=clipboard-settings-change
-mtime=1688446826
+mtime=1694248417
 
 [spectacle_newConfig.upd]
-ctime=1692275968
-mtime=1688446826
+ctime=1697058530
+mtime=1694248417
 
 [spectacle_rememberregion.upd]
-ctime=1692275968
+ctime=1697058530
 done=spectacle-migrate-rememberregion
-mtime=1688446826
+mtime=1694248417
 
 [spectacle_shortcuts.upd]
-ctime=1692275968
+ctime=1697058530
 done=spectacle-migrate-shortcuts
-mtime=1688446826
+mtime=1694248417
 
 [style_widgetstyle_default_breeze.upd]
-ctime=1692275965
-mtime=1687268075
+ctime=1697058527
+mtime=1694514764

@@ -4,6 +4,8 @@ switch-to-activity-b1dd3df8-9e9c-4db2-b8bc-bb623addd247=none,none,Switch to acti
 switch-to-activity-cf0e0390-486e-4bf4-a0df-92d85f8eed15=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
+Switch keyboard layout to Russian (Japanese, phonetic)=none,none,Switch keyboard layout to Russian (Japanese\\, phonetic)
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 

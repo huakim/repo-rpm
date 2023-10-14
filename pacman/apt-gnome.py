@@ -35,6 +35,7 @@ pkgs.extend((
 "gnome-session-xsession",
 "gnome-shell-extension-appindicator",
 "gnome-shell-extension-dash-to-dock",
+"gnome-shell-extension-valent",
 "gnome-system-monitor",
 "gnome-terminal",
 "gnome-terminal-nautilus",
@@ -68,9 +69,9 @@ pkgs.extend((
 'seahorse'
 ))
 
-for i in ('dm', 'mpath', 'btrfs', 'lvm', 'nvdimm'):
-    pkgs.append('libblockdev-'+i)
-pkgs.append('anaconda-live')
+#for i in ('dm', 'mpath', 'btrfs', 'lvm', 'nvdimm'):
+#    pkgs.append('libblockdev-'+i)
+#pkgs.append('anaconda-live')
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     main()

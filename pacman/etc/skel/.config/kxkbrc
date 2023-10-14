@@ -6,5 +6,6 @@ DisplayNames=,
 LayoutList=jp,jp
 Options=grp:alt_shift_toggle,lv3:switch
 ResetOldOptions=true
+SwitchMode=Window
 Use=true
 VariantList=,rus

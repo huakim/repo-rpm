@@ -3,7 +3,13 @@ update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-
 
 [Desktops]
 Id_1=fbb6d8ab-601c-4f4f-9ea1-8faf5d6482c9
-Number=1
+Id_2=fd94b7c9-1062-4ab7-b529-f2ebdae80e4a
+Id_3=ca968261-a332-4e3e-b25f-5b184bf30cd8
+Id_4=9beb9535-d21a-4201-8c31-5450de02a6ea
+Id_5=be38f28a-2c9b-42ab-be17-9b8a2c5e9525
+Id_6=d2a353a8-73cf-4376-8b6d-faf9e7234470
+Id_7=c04e2e6d-49a1-48b6-8e21-22ef0c84045e
+Number=7
 Rows=1
 
 [NightColor]
@@ -18,4 +24,5 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [org.kde.kdecoration2]
-ButtonsOnRight=HLIAX
+ButtonsOnLeft=M
+ButtonsOnRight=IX

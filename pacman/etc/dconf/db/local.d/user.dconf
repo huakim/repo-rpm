@@ -4,23 +4,25 @@ primary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'jp'), ('xkb', 'jp+rus')]
+per-window=true
 sources=[('xkb', 'jp'), ('xkb', 'jp+rus')]
-xkb-options=['terminate:ctrl_alt_bksp']
+xkb-options=['lv3:switch']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=true
 color-scheme='prefer-dark'
 cursor-theme='Adwaita'
-document-font-name='Ubuntu Medium 11'
+document-font-name='Cantarell 11'
 enable-animations=false
-font-name='Ubuntu 11'
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Sans 11'
 gtk-theme='Adwaita-dark'
 icon-theme='Adwaita'
-monospace-font-name='Ubuntu Mono 11'
+monospace-font-name='Roboto Mono 11'
 
 [org/gnome/desktop/peripherals/keyboard]
 delay=uint32 180
-numlock-state=true
 repeat=true
 repeat-interval=uint32 20
 
@@ -43,21 +45,21 @@ switch-input-source-backward=['<Alt>Shift_L']
 button-layout=':minimize,maximize,close'
 theme='Adwaita'
 
-[org/gnome/epiphany]
-default-search-engine='Google'
-
 [org/gnome/epiphany/web]
 ask-on-download=true
 enable-adblock=false
 enable-mouse-gestures=true
 enable-popups=true
 enable-webextensions=true
-last-download-directory='/home/lenovo/Downloads'
-last-upload-directory='/home/lenovo/.cache/.fr-AXPA91'
 webextensions-active=['Dark Mode']
 
 [org/gnome/mutter]
 attach-modal-dialogs=false
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
@@ -65,95 +67,25 @@ night-light-schedule-automatic=false
 night-light-schedule-from=0.0
 night-light-schedule-to=0.0
 
+[org/gnome/shell]
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'valent@andyholmes.ca']
+
 [org/gnome/shell/extensions/dash-to-dock]
-always-center-icons=false
-animate-show-apps=false
-animation-time=0.20000000000000001
-apply-custom-theme=true
-autohide=true
-autohide-in-fullscreen=false
-background-opacity=0.80000000000000004
 custom-theme-shrink=true
-dance-urgent-applications=true
-dash-max-icon-size=48
+dash-max-icon-size=40
 dock-fixed=true
 dock-position='RIGHT'
 extend-height=true
-height-fraction=0.90000000000000002
-hide-delay=0.20000000000000001
-icon-size-fixed=false
-intellihide=true
-intellihide-mode='FOCUS_APPLICATION_WINDOWS'
+isolate-locations=true
 isolate-monitors=true
 isolate-workspaces=true
-multi-monitor=true
-preferred-monitor=-2
-preferred-monitor-by-connector='eDP-1'
-pressure-threshold=100.0
-require-pressure-to-show=true
-scroll-action='switch-workspace'
-scroll-to-focused-application=true
-show-apps-always-in-the-edge=true
-show-apps-at-top=false
-show-delay=0.25
-show-dock-urgent-notify=true
 show-mounts=false
-show-mounts-only-mounted=false
-show-running=true
-show-show-apps-button=true
+show-mounts-network=false
 show-trash=false
-show-windows-preview=true
-workspace-agnostic-urgent-windows=false
 
-[org/gnome/shell/extensions/unite]
-app-menu-ellipsize-mode='start'
-app-menu-max-width=0
-autofocus-windows=false
-desktop-name-text='Desktop'
-enable-titlebar-actions=false
-extend-left-box=true
-greyscale-tray-icons=false
-hide-activities-button='never'
-hide-app-menu-icon=false
-hide-dropdown-arrows=false
-hide-window-titlebars='both'
-notifications-position='left'
-reduce-panel-spacing=false
-restrict-to-primary-screen=false
-show-desktop-name=false
-show-legacy-tray=false
-show-window-buttons='both'
-show-window-title='both'
-window-buttons-placement='right'
-window-buttons-theme='breeze'
+[org/gnome/tweaks]
+show-extensions-notice=false
 
 [org/gtk/gtk4/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
 show-hidden=true
-show-size-column=true
-show-type-column=true
-sidebar-width=140
-sort-column='name'
 sort-directories-first=false
-sort-order='ascending'
-type-format='category'
-view-type='list'
-window-size=(827, 374)
-
-[org/gnome/shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'unite@hardpixel.eu', 'dash-to-dock@micxgx.gmail.com']
-
-[org/gtk/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
-show-hidden=true
-show-size-column=true
-show-type-column=true
-sidebar-width=163
-sort-column='name'
-sort-directories-first=false
-sort-order='ascending'
-type-format='category'
-window-position=(26, 23)
-window-size=(1203, 1001)

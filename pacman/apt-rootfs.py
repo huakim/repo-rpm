@@ -27,6 +27,7 @@ pkgs.extend((
 "net-tools",
 "pciutils",
 "psmisc",
+"rsync",
 "sed",
 "shadow",
 "sudo",
@@ -39,7 +40,7 @@ pkgs.extend((
 ))
 # );
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     main()
 
 # unless (caller){

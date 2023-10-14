@@ -1,0 +1,16 @@
+[ExtractDialog]
+DirHistory[$e]=$HOME/Desktop/warcraft3/Campaigns/
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Desktop/warcraft3/Campaigns,file:$HOME/Desktop/warcraft3/Campaigns
+Recent URLs[$e]=file:$HOME/Desktop/warcraft3/Campaigns/
+detailViewIconSize=16
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAQAAAAEAAACoAAACKvwCAAAAAfsAAAAWAGEAcgBrAF8AcwBpAGQAZQBiAGEAcgEAAAAuAAACKgAAAHMBAAACAAADDQAAAioAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+StatusBar=Disabled
+ToolBarsMovable=Disabled
