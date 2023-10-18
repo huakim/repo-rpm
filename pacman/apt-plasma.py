@@ -53,17 +53,19 @@ pkgs.extend((
 'qt5-qdbusviewer',
 #'slick-greeter',
 'sddm',
+'sddm-breeze',
+'sddm-kcm',
 'spectacle',
 'upower',
 'xdg-desktop-portal-kde'
 ))
 
-pkgs.extend((
-'kmail-account-wizard',
-'qt5-qtwebengine-devtools.x86_64',
-'falkon',
-'kmail'
-))
+#pkgs.extend((
+#'kmail-account-wizard',
+#'qt5-qtwebengine-devtools.x86_64',
+#'falkon',
+#'kmail'
+#))
 
 if __name__ == '__main__': 
     main()

@@ -1,0 +1,7 @@
+[Emulators_Wine_STABLE]
+name=Stable Wine versions (openSUSE_Factory)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/Emulators:/Wine:/STABLE/openSUSE_Factory/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/Emulators:/Wine:/STABLE/openSUSE_Factory/repodata/repomd.xml.key
+enabled=1

@@ -1,8 +1,25 @@
 [ActionPlugins][0]
-RightButton;NoModifier=org.kde.applauncher
+RightButton;NoModifier=org.kde.contextmenu
 wheel:Vertical;NoModifier=org.kde.switchdesktop
 
 [ActionPlugins][0][RightButton;NoModifier]
+_add panel=true
+_context=true
+_display_settings=true
+_lock_screen=true
+_logout=true
+_open_terminal=true
+_run_command=false
+_sep1=true
+_sep2=true
+_sep3=true
+_wallpaper=true
+add widgets=true
+configure=true
+configure shortcuts=false
+edit mode=true
+manage activities=true
+remove=true
 showAppsByName=false
 
 [ActionPlugins][1]
@@ -22,7 +39,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][17][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 popupHeight=450
 popupWidth=396
 
@@ -59,7 +76,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=85
+PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -67,7 +84,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=27;29;17;28;4;7;18
+AppletOrder=27;29;17;7;28;4;18
 
 [Containments][22]
 activityId=
@@ -164,6 +181,9 @@ PreloadWeight=55
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
+[Containments][8][Applets][12][Configuration]
+PreloadWeight=100
+
 [Containments][8][Applets][13]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
@@ -185,18 +205,25 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][19][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][20]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=47
+PreloadWeight=44
 
 [Containments][8][Applets][21]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
+
+[Containments][8][Applets][21][Configuration]
+PreloadWeight=100
+
+[Containments][8][Applets][31]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][9]
 immutability=1

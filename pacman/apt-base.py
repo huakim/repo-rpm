@@ -22,6 +22,7 @@ pkgs.extend((
 "squashfs-tools",
 "tor",
 "obfs4",
+"gpm",
 "e2fsprogs",
 "xfsprogs"
 ))

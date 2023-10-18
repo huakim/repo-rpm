@@ -2,7 +2,7 @@
 autoload=false
 
 [Module-baloosearchmodule]
-autoload=false
+autoload=true
 
 [Module-bluedevil]
 autoload=false
@@ -65,4 +65,4 @@ autoload=false
 autoload=false
 
 [Module-statusnotifierwatcher]
-autoload=false
+autoload=true
