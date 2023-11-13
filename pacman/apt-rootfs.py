@@ -33,6 +33,7 @@ pkgs.extend((
 "shadow",
 "sudo",
 "systemd",
+"systemd-container",
 "tzdata",
 "unzip",
 "wget",
