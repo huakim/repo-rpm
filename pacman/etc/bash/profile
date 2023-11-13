@@ -1,6 +1,13 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/local/games
 export PATH
 alias sudo='sudo '
+
+git-update(){
+ git add --all
+ git commit -m update
+ git push
+} 
+
 shopt -s globstar
 shopt -s expand_aliases
 
@@ -33,3 +40,6 @@ ${1}(){
 
 _ 'rpmspec-buildreqs' 'rpmspec --parse' 'BuildRequires:[[:space:]]*'
 
+_(){
+ :
+}

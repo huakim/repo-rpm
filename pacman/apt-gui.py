@@ -9,13 +9,14 @@ main=j.main
 
 pkgs.extend((
 "dbus-x11",
-"geany",
 "gparted",
 "generic-logos",
 "google-roboto-mono-fonts",
 "open-sans-fonts",
 "openh264",
-"pulseaudio",
+"pipewire",
+"pipewire-pulseaudio",
+"pipewire-media-session",
 "qemu-system-x86",
 "uget",
 "virt-manager",

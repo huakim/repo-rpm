@@ -1,8 +1,0 @@
-[home_huakim_java-packages]
-name=Branch project for package json-java (Java_packages)
-priority=120
-type=rpm-md
-baseurl=https://download.opensuse.org/repositories/home:/huakim:/java-packages/Java_packages/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/huakim:/java-packages/Java_packages/repodata/repomd.xml.key
-enabled=1

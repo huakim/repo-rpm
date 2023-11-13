@@ -21,6 +21,7 @@ pkgs.extend((
 "eog",
 "file-roller",
 "file-roller-nautilus",
+"geany",
 "gcr3",
 "gdm",
 "gjs",

@@ -15,6 +15,7 @@ pkgs.extend((
 "dhcp-client",
 "dnf-command(config-manager)",
 "dnf-command(versionlock)",
+"fakeroot",
 "file",
 "glibc",
 "glibc-langpack-en",

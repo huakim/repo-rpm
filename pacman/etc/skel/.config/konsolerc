@@ -5,12 +5,17 @@ DefaultProfile=Default Profile.profile
 ConfigVersion=1
 
 [MainWindow]
+1600x920 screen: Height=552
+1600x920 screen: Width=911
+1600x920 screen: XPosition=344
+1600x920 screen: YPosition=188
 1920x1080 screen: Height=944
 1920x1080 screen: Width=1213
 MenuBar=Disabled
 RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAXwBAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABFQEAAAMAAAS9AAADggAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAAOj/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
+default=default
 
 [UiSettings]
 ColorScheme=

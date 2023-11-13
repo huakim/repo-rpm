@@ -67,6 +67,10 @@ plugin=org.kde.plasma.panelspacer
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
+[Containments][2][Applets][34]
+immutability=1
+plugin=org.kde.plasma.lock_logout
+
 [Containments][2][Applets][4]
 immutability=1
 plugin=org.kde.plasma.pager
@@ -84,31 +88,16 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=27;29;17;7;28;4;18
+AppletOrder=27;29;17;7;28;4;34;18
 
 [Containments][22]
 activityId=
-formfactor=3
+formfactor=2
 immutability=1
 lastScreen=0
-location=6
+location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
-
-[Containments][22][Applets][23]
-immutability=1
-plugin=org.kde.plasma.lock_logout
-
-[Containments][22][Applets][24]
-immutability=1
-plugin=org.kde.plasma.icontasks
-
-[Containments][22][Applets][24][Configuration][General]
-launchers=
-
-[Containments][22][Applets][25]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
 
 [Containments][22][Applets][26]
 immutability=1
@@ -122,14 +111,30 @@ popupWidth=651
 [Containments][22][Applets][26][Configuration][General]
 favoritesPortedToKAstats=true
 
+[Containments][22][Applets][31]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][22][Applets][32]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][22][Applets][36]
+immutability=1
+plugin=org.kde.plasma.taskmanager
+
+[Containments][22][Applets][36][Configuration][General]
+launchers=
+
 [Containments][22][ConfigDialog]
-DialogHeight=1080
-DialogWidth=168
+DialogHeight=84
+DialogWidth=1920
 
 [Containments][22][General]
-AppletOrder=23;25;24;26
+AppletOrder=31;36;26;32
 
 [Containments][30]
+ItemGeometries-1600x920=
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=b1dd3df8-9e9c-4db2-b8bc-bb623addd247
@@ -147,10 +152,19 @@ DialogWidth=720
 [Containments][30][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=444
-ToolBoxButtonY=36
+ToolBoxButtonY=34
 
 [Containments][30][Wallpaper][org.kde.color][General]
 Color=0,0,0
+
+[Containments][33]
+activityId=b1dd3df8-9e9c-4db2-b8bc-bb623addd247
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
 
 [Containments][8]
 activityId=
@@ -175,7 +189,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][12]
 immutability=1
@@ -205,14 +219,14 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][19][Configuration]
-PreloadWeight=60
+PreloadWeight=44
 
 [Containments][8][Applets][20]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=44
+PreloadWeight=0
 
 [Containments][8][Applets][21]
 immutability=1
@@ -225,12 +239,15 @@ PreloadWeight=100
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
+[Containments][8][Applets][31][Configuration]
+PreloadWeight=0
+
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=55
+PreloadWeight=70
 
 [Containments][8][Applets][9][Configuration][General]
 migrated=true
@@ -246,3 +263,4 @@ showAllItems=true
 
 [ScreenMapping]
 itemsOnDisabledScreens=
+screenMapping=desktop:/Templates,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Screenshots,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Documents,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Screencasts,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Pictures,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Videos,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/IntelliJIDEAProjects,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/AndroidStudioProjects,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Projects,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/waydroid,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Desktop,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/%25,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/NetBeansProjects,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Public,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Downloads,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/workspace,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/64Gram Desktop,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/Music,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/user_data,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247,desktop:/projects,1,b1dd3df8-9e9c-4db2-b8bc-bb623addd247

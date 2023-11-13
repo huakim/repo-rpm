@@ -1,5 +1,5 @@
 [PlasmaTransientsConfig]
-PreloadWeight=10
+PreloadWeight=0
 
 [PlasmaTransientsConfig][ConfigDialog]
 DialogHeight=84
@@ -9,11 +9,10 @@ DialogWidth=1920
 alignment=2
 
 [PlasmaViews][Panel 2][Defaults]
-offset=54
 thickness=34
 
 [PlasmaViews][Panel 22][Defaults]
-thickness=54
+thickness=40
 
 [PlasmaViews][Panel 31][Defaults]
 thickness=36

@@ -23,6 +23,12 @@ padding=4
 [Tiling][3c373409-48e0-57e9-a1a9-eb32e49f8772]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][3e6a13d3-7d29-5922-82c3-84e8bdf10429]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][c73684f0-83c4-5586-b5c5-86ac66d58d6c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [org.kde.kdecoration2]
 ButtonsOnLeft=M
 ButtonsOnRight=IX

@@ -23,6 +23,8 @@ pkgs.extend((
 'gwenview',
 'haruna',
 'pavucontrol-qt',
+'kate',
+'kate-plugins',
 'keepassxc',
 'kde-connect',
 'kde-inotify-survey',
@@ -40,9 +42,12 @@ pkgs.extend((
 'kwayland-integration',
 'kwin-wayland',
 'kwin-x11',
+#'materia-gtk-theme',
+#'materia-kde',
 #'lightdm',
 #'lightdm-settings',
 'plasma-desktop',
+'plasma-drkonqi',
 'plasma-milou',
 'plasma-nm',
 'plasma-pa',
@@ -67,5 +72,5 @@ pkgs.extend((
 #'kmail'
 #))
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     main()

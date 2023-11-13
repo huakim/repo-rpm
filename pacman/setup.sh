@@ -44,8 +44,9 @@ uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/konsole 25
 uP /usr/bin/sensible-browser sensible-browser /usr/bin/falkon 25
 uP /usr/bin/sensible-browser sensible-browser /usr/bin/epiphany 25
+uP /usr/bin/kvm kvm /usr/bin/qemu-kvm 25
 uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/konsole 25
-uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/xfce4-terminal
+uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/xfce4-terminal 25
 uP /usr/bin/vi vi /usr/bin/nano 25
 uP /usr/bin/python python /usr/bin/python3 25
 
