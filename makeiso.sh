@@ -19,7 +19,7 @@ i sys
 i extra "${smp}"
 
 chroot . /bin/bash /extra/pacman/copy-live.sh
-#chroot . /bin/bash /extra/pacman/setup-live.sh
+chroot . /bin/bash /extra/pacman/setup-live.sh
 
 umount extra dev proc sys
 cd ..
