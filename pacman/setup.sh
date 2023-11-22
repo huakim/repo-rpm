@@ -33,8 +33,10 @@ ds org.kde.kdeconnect.daemon
 ds org.kde.kalendarac
 ds kaccess
 
-kver="$(ls /lib/modules)"
-
+kver="$(ls usr/lib/modules)"
+echo KVER EDIT
+ls usr/lib/modules
+echo $kver
 #$lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
 $lT "usr/lib/modules/$kver/vmlinuz" /vmlinuz
 $lT "boot/initramfs-$kver.img" /initrd.img
