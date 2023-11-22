@@ -53,10 +53,9 @@ jobs:
           cd ..
           export RELEASEVER=39
           sudo dnf --nogpgcheck "--releasever=$RELEASEVER" makecache -y
-          mkdir bootstrap-gnome
           export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           export NOGPGCHECK=1
-          sudo -E ./bootstrap.sh gnome
+          sudo -E ./bootstrap.sh plasma
           sudo mkdir -p pacman/var/cache/dnf ||:
           sudo mkdir -p pacman/var/lib/dnf ||:
           sudo chmod 777 -R pacman/var/cache/dnf
@@ -74,10 +73,10 @@ jobs:
 
       - name: Create ISO
         run: |
-           sudo ./makeiso.sh gnome
+           sudo ./makeiso.sh plasma
 
       - name: Upload ISO
         uses: actions/upload-artifact@v3
         with:
-          name: fedora_gnome_x86_64_iso
-          path: liveiso-gnome.iso
+          name: fedora_plasma_x86_64_iso
+          path: liveiso-plasma.iso
