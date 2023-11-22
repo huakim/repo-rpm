@@ -76,7 +76,11 @@ jobs:
            sudo ./makeiso.sh plasma
 
       - name: Upload ISO
-        uses: actions/upload-artifact@v3
-        with:
-          name: fedora_plasma_x86_64_iso
-          path: liveiso-plasma.iso
+        run: |
+           tag="plasma-$(date +%s)"
+           gh release create "$tag"
+           gh release upload "$tag" ./liveiso-plasma.iso
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: fedora_plasma_x86_64_iso
+#          path: liveiso-plasma.iso
