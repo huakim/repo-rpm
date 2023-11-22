@@ -30,7 +30,7 @@ jobs:
         uses: burgerzuhsaga/apt_cache/restore@main
         with:
           key: ubuntu-cache
-          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools
+          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools systemd-container
 
       - name: Save Apt Cache
         uses: burgerzuhsaga/apt_cache/save@main
@@ -63,7 +63,7 @@ jobs:
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           gh cache delete fedora-cache || :
           sudo ./makeiso.sh plasma
-          tag="plasma-$(date +%s)"
+          tag="plasma-$(date '+%Y%m%d.%H%M%S%N')"
           gh release create "$tag"
           gh release upload "$tag" ./liveiso-plasma.iso
           
