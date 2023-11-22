@@ -29,7 +29,7 @@ i proc
 i sys
 i extra "${smp}"
 #echo "${smp}"
-alias chroot='systemd-nspawn -D '
+#alias chroot='systemd-nspawn -D '
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386
 #chroot . /bin/bash
