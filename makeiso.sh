@@ -16,12 +16,12 @@ cd "bootstrap-$1"
 i dev
 i proc
 i sys
-i extra "${smp}"
+i extra/repo "${smp}"
 
-chroot . /bin/bash /extra/pacman/copy-live.sh
-chroot . /bin/bash /extra/pacman/setup-live.sh
+chroot . /bin/bash /extra/repo/pacman/copy-live.sh
+#chroot . /bin/bash /extra/repo/pacman/setup-live.sh
 
-umount extra dev proc sys
+umount extra/repo dev proc sys
 cd ..
 
 iso="liveiso-$1/"
@@ -51,5 +51,4 @@ menuentry 'Live Boot' {
 }
 EOF
 
-"$GR" -v -o "liveiso-$1.iso" -V "LiveOS_$1" "${iso}" 
-
+"$GR" -v -o "liveiso-$1.iso" -V "LiveOS_$1" "${iso}"

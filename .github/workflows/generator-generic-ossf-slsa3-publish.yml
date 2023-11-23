@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: update
+name: update-versions
 
 # Controls when the workflow will run
 on:
@@ -30,7 +30,7 @@ jobs:
         uses: burgerzuhsaga/apt_cache/restore@main
         with:
           key: ubuntu-cache
-          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools systemd-container
+          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools
 
       - name: Save Apt Cache
         uses: burgerzuhsaga/apt_cache/save@main
@@ -53,20 +53,17 @@ jobs:
           cd ..
           export RELEASEVER=39
           sudo dnf --nogpgcheck "--releasever=$RELEASEVER" makecache -y
+          mkdir bootstrap-gnome
           export DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
           export NOGPGCHECK=1
-          sudo -E ./bootstrap.sh plasma
+          sudo -E ./bootstrap.sh gnome
           sudo mkdir -p pacman/var/cache/dnf ||:
           sudo mkdir -p pacman/var/lib/dnf ||:
           sudo chmod 777 -R pacman/var/cache/dnf
           sudo chmod 777 -R pacman/var/lib/dnf
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           gh cache delete fedora-cache || :
-          sudo ./makeiso.sh plasma
-          tag="plasma-$(date '+%Y%m%d.%H%M%S%N')"
-          gh release create "$tag"
-          gh release upload "$tag" ./liveiso-plasma.iso
-          
+
       - name: Save Fedora Cache
         uses: actions/cache/save@v3
         with:
@@ -75,9 +72,12 @@ jobs:
             pacman/var/lib/dnf
           key: fedora-cache
 
- #     - name: Create ISO
- #       run: |
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: fedora_plasma_x86_64_iso
-#          path: liveiso-plasma.iso
+      - name: Create ISO
+        run: |
+           sudo ./makeiso.sh gnome
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v3
+        with:
+          name: fedora_gnome_x86_64_iso
+          path: liveiso-gnome.iso

@@ -27,7 +27,8 @@ i(){
 i dev
 i proc
 i sys
-i extra "${smp}"
+
+i extra/repo "${smp}"
 #echo "${smp}"
 #alias chroot='systemd-nspawn -D '
 #chroot . /bin/bash
@@ -37,17 +38,18 @@ CACHEDIR="${smp}/pacman/var/cache/dnf" INSTALLROOT="${dir}" RELEASEVER="$RELEASE
 #i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/bash "/extra/pacman/apt-$1.py"
-chroot . /bin/bash /extra/pacman/copy.sh
-chroot . /bin/bash /extra/pacman/setup.sh
-chroot . /bin/bash /extra/pacman/user.sh
+chroot . /bin/bash /extra/repo/pacman/copy.sh
+chroot . /bin/bash /extra/repo/pacman/setup.sh
+chroot . /bin/bash /extra/repo/pacman/user.sh
 #chroot . /sbin/runuser -u lenovo -c 'cd /extra/home/lenovo; ./txt.sh'
 eval "chroot . /bin/dracut --kver=$(ls ./lib/modules) $DRACUT_ARGS"
 if [ -f "$FSTAB" ]; then
   rm -v ./etc/fstab
   cp -v "$FSTAB" ./etc/fstab
-  chroot . /bin/bash /extra/pacman/aptat.sh
+  chroot . /bin/bash /extra/repo/pacman/aptat.sh
 #  chroot . /usr/bin/env 'HOME=/home/lenovo' /bin/bash /extra/home/lenovo/txt.sh
 else
-  chroot . /bin/bash /extra/pacman/aptdt.sh
+  chroot . /bin/bash /extra/repo/pacman/aptdt.sh
 fi
-umount extra dev proc sys
+umount extra/repo
+umount dev proc sys

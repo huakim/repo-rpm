@@ -18,7 +18,6 @@ pkgs.extend((
 'ark',
 'bluedevil',
 'breeze-gtk',
-'calamares',
 'dolphin',
 'gnome-disk-utility',
 'gwenview',
