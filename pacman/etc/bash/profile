@@ -4,7 +4,8 @@ alias sudo='sudo '
 
 git-update(){
  git add --all
- git commit -m update
+ message="${1:-update}"
+ git commit -m "${message}"
  git push
 } 
 
