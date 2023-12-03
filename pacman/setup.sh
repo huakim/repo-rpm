@@ -25,6 +25,8 @@ ds(){
     fi
 }
 
+systemctl disable NetworkManager-wait-online
+
 ds xfsettingsd
 ds org.gnome.Evolution-alarm-notify
 ds ca.andyholmes.Valent-autostart

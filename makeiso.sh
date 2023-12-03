@@ -46,7 +46,7 @@ mkdir -p "${dir}"
 
 cat <<EOF > "${dir}/grub.cfg"
 menuentry 'Live Boot' {
-  linux /LiveOS/vmlinuz root=live:LABEL="LiveOS_$1" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1
+  linux /LiveOS/vmlinuz root=live:LABEL="LiveOS_$1" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 rd.live.ram=1
   initrd /LiveOS/initrd.img
 }
 EOF

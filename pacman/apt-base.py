@@ -32,7 +32,7 @@ pkgs.extend((
 
 pkgs.extend((
 "intel-compute-runtime",
-"kernel",
+"kernel-lqx",
 "kexec-tools",
 "mesa-dri-drivers",
 "nvidia-gpu-firmware",
