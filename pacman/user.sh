@@ -1,6 +1,6 @@
 
 #!/bin/sh
-user="huakim"
+user="asus"
 password='$y$j9T$mmXw9Jh0PiPha988WSRo3.$tGOra7DOoU5dbQrk23h9.DqkEBrYCLIQf2B.pEdV2C9'
 admin='wheel'
 root='root'

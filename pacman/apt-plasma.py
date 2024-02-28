@@ -14,36 +14,37 @@ pkgs=j.pkgs
 main=j.main
 
 pkgs.extend((
+'plasma-nm-openvpn',
 'accountsservice',
 'ark',
 'bluedevil',
 'breeze-gtk',
 'dolphin',
-'gnome-disk-utility',
+#'gnome-disk-utility',
 'gwenview',
 'haruna',
 'pavucontrol-qt',
 'kate',
 'kate-plugins',
-'keepassxc',
 'kde-connect',
 'kde-inotify-survey',
 'kde-gtk-config',
 'kde-settings-plasma',
 'kde-settings-pulseaudio',
 'kdialog',
-'kf5-kunitconversion',
+#'kf5-kunitconversion',
 'kio-admin',
 'kio-extras',
 'kio-fuse',
 'kmenuedit',
 'konsole',
 'kscreen',
+#'ktorrent',
 'kwayland-integration',
 'kwin-wayland',
-'kwin-x11',
-#'materia-gtk-theme',
-#'materia-kde',
+#'kwin-x11',
+'materia-gtk-theme',
+'materia-kde',
 #'lightdm',
 #'lightdm-settings',
 'plasma-desktop',
@@ -54,8 +55,8 @@ pkgs.extend((
 'plasma-systemmonitor',
 'plasma-wayland-protocols',
 'plasma-workspace-wayland',
-'plasma-workspace-x11',
-'qt5-qdbusviewer',
+#'plasma-workspace-x11',
+#'qt5-qdbusviewer',
 #'slick-greeter',
 'sddm',
 'sddm-breeze',
@@ -65,12 +66,12 @@ pkgs.extend((
 'xdg-desktop-portal-kde'
 ))
 
-#pkgs.extend((
+pkgs.extend((
 #'kmail-account-wizard',
-#'qt5-qtwebengine-devtools.x86_64',
-#'falkon',
+#'qt5-qtwebengine-devtools',
+'falkon',
 #'kmail'
-#))
+))
 
 if __name__ == '__main__':
     main()

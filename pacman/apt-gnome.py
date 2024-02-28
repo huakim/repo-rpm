@@ -14,14 +14,19 @@ pkgs=j.pkgs
 main=j.main
 
 pkgs.extend((
+"NetworkManager-openvpn-gnome",
 "adwaita-gtk2-theme",
+"adwaita-qt5",
+"adwaita-qt6",
 "alacarte",
 "celluloid",
 "dconf-editor",
 "eog",
+"evince",
 "file-roller",
 "file-roller-nautilus",
 "geany",
+"geany-themes",
 "gcr3",
 "gdm",
 "gjs",
@@ -32,11 +37,12 @@ pkgs.extend((
 "gnome-keyring",
 "gnome-menus",
 "gnome-power-manager",
+"gnome-remote-desktop",
 "gnome-session-wayland-session",
 "gnome-session-xsession",
 "gnome-shell-extension-appindicator",
 "gnome-shell-extension-dash-to-dock",
-"gnome-shell-extension-valent",
+#"gnome-shell-extension-valent",
 "gnome-system-monitor",
 "gnome-terminal",
 "gnome-terminal-nautilus",
@@ -51,22 +57,23 @@ pkgs.extend((
 "polkit-gnome",
 "qgnomeplatform-qt5",
 "qgnomeplatform-qt6",
-"redshift",
-"remmina",
-"remmina-plugins-rdp",
-"remmina-plugins-secret",
-"remmina-plugins-vnc",
-"secrets",
-"valent",
+#"redshift",
+#"remmina",
+#"remmina-plugins-rdp",
+#"remmina-plugins-secret",
+#"remmina-plugins-vnc",
+#"valent",
 "xdg-desktop-portal-gtk"
 ))
 
-for i in ('good', 'bad-free', 'base', 'ugly-free'):
+for i in ('good', 'bad-free', 'base', 'ugly-free', 'bad-free-extras', ):
     pkgs.append("gstreamer1-plugins-"+i)
+pkgs.append('gstreamer1-plugin-openh264')
 
 pkgs.extend((
 'geary',
 'epiphany',
+#'evolution',
 'seahorse'
 ))
 

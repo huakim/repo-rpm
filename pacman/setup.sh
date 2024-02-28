@@ -51,6 +51,7 @@ uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/konsole 25
 uP /usr/bin/gnome-terminal gnome-terminal /usr/bin/xfce4-terminal 25
 uP /usr/bin/vi vi /usr/bin/nano 25
 uP /usr/bin/python python /usr/bin/python3 25
+uP /usr/bin/dnf dnf /usr/bin/dnf5 25
 
 #dconf update
 

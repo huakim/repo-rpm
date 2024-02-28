@@ -1,5 +1,5 @@
-[$Version]
-update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
+[SubSession: 95cde8e0-f45e-4ec6-98f4-42b2b565ca13]
+count=0
 
-[General]
-loginMode=emptySession
+[SubSession: df54f55c-a2d0-47a2-a08c-9a89e1e25b22]
+count=0

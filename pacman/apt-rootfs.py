@@ -6,6 +6,12 @@
 j=__import__('apt-chroot')
 pkgs=j.pkgs
 main=j.main
+
+dnfplugins=(
+'dnf5-plugins',
+)
+
+pkgs.extend(dnfplugins)
 # push @pkgs, qw(
 pkgs.extend((
 "NetworkManager",
@@ -13,8 +19,8 @@ pkgs.extend((
 "ca-certificates",
 "coreutils",
 "dhcp-client",
-"dnf-command(config-manager)",
-"dnf-command(versionlock)",
+#"dnf-command(config-manager)",
+#"dnf-command(versionlock)",
 "fakeroot",
 "file",
 "glibc",

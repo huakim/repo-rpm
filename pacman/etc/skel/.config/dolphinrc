@@ -1,16 +1,12 @@
-[$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
-
 [ContextMenu]
 ShowCopyMoveMenu=true
 
 [DetailsMode]
-IconSize=32
 PreviewSize=32
 
 [General]
 Version=202
-ViewPropsTimestamp=2023,8,16,14,42,53.226
+ViewPropsTimestamp=2024,2,6,19,42,15.317
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -21,4 +17,4 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,fontthumbnail,directorythumbnail
+Plugins=

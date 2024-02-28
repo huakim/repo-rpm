@@ -2,12 +2,9 @@
 autoload=false
 
 [Module-baloosearchmodule]
-autoload=true
-
-[Module-bluedevil]
 autoload=false
 
-[Module-browserintegrationreminder]
+[Module-bluedevil]
 autoload=false
 
 [Module-colorcorrectlocationupdater]
@@ -16,14 +13,17 @@ autoload=false
 [Module-device_automounter]
 autoload=false
 
+[Module-devicenotifications]
+autoload=false
+
 [Module-freespacenotifier]
 autoload=false
 
 [Module-gtkconfig]
-autoload=true
+autoload=false
 
 [Module-inotify]
-autoload=true
+autoload=false
 
 [Module-kded_accounts]
 autoload=false
@@ -34,13 +34,7 @@ autoload=false
 [Module-keyboard]
 autoload=false
 
-[Module-khotkeys]
-autoload=false
-
 [Module-kscreen]
-autoload=false
-
-[Module-ksysguard]
 autoload=false
 
 [Module-ktimezoned]
@@ -49,16 +43,16 @@ autoload=false
 [Module-kwrited]
 autoload=false
 
-[Module-networkmanagement]
-autoload=true
+[Module-mprisservice]
+autoload=false
 
-[Module-networkstatus]
+[Module-networkmanagement]
+autoload=false
+
+[Module-plasma-session-shortcuts]
 autoload=false
 
 [Module-plasma_accentcolor_service]
-autoload=false
-
-[Module-proxyscout]
 autoload=false
 
 [Module-remotenotifier]
@@ -68,7 +62,4 @@ autoload=false
 autoload=false
 
 [Module-statusnotifierwatcher]
-autoload=true
-
-[PlasmaBrowserIntegration]
-shownCount=1
+autoload=false

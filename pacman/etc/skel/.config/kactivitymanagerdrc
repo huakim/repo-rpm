@@ -1,5 +1,7 @@
 [activities]
-b1dd3df8-9e9c-4db2-b8bc-bb623addd247=Default
+95cde8e0-f45e-4ec6-98f4-42b2b565ca13=Default
 
 [main]
-currentActivity=b1dd3df8-9e9c-4db2-b8bc-bb623addd247
+currentActivity=95cde8e0-f45e-4ec6-98f4-42b2b565ca13
+runningActivities=95cde8e0-f45e-4ec6-98f4-42b2b565ca13
+stoppedActivities=

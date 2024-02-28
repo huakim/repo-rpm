@@ -7,7 +7,7 @@ relver=re.compile('^(.*releasever.*)$', re.MULTILINE)
 relatr=re.compile('.*=\s*(.*)')
 
 env=os.environ.get
-dnf='dnf'
+dnf='dnf5'
 pkgs=[dnf, 'bash']
 
 def chstr(a):
@@ -40,7 +40,7 @@ def load(*a):
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
         DEBUGONLY=env('DEBUGONLY')
-        flags = [dnf, 'install', #'--use-host-config',
+        flags = [dnf, 'install', '--use-host-config',
           '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
             flags.extend(('--setopt','cachedir='+CACHEDIR))

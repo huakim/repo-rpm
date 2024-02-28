@@ -10,6 +10,7 @@ main=j.main
 pkgs.extend((
 "NetworkManager-bluetooth",
 "NetworkManager-wifi",
+"NetworkManager-openvpn",
 "at-spi2-core",
 "btrfs-progs",
 "bluez-obexd",
@@ -23,6 +24,8 @@ pkgs.extend((
 "tor",
 "obfs4",
 "gpm",
+"iwlwifi-dvm-firmware",
+"iwlwifi-mvm-firmware",
 "e2fsprogs",
 "xfsprogs"
 ))
@@ -31,11 +34,11 @@ pkgs.extend((
 #);
 
 pkgs.extend((
-"intel-compute-runtime",
-"kernel-lqx",
+#"intel-compute-runtime",
+"kernel",
 "kexec-tools",
 "mesa-dri-drivers",
-"nvidia-gpu-firmware",
+#"nvidia-gpu-firmware",
 "realtek-firmware"
 ))
 
