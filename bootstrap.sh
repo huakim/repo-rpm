@@ -39,7 +39,7 @@ i "${idir}" "${smp}"
 #echo "$dir"
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
-INSTALLROOT="${dir}" CACHEDIR="${smp}/pacman/var/cache/libdnf5" RELEASEVER="${RELEASEVER}s" python3 "${smp}/pacman/apt-$1.py"
+INSTALLROOT="${dir}" CACHEDIR="${smp}/pacman/var/cache/libdnf5" RELEASEVER="${RELEASEVER}" python3 "${smp}/pacman/apt-$1.py"
 #i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/bash "/extra/pacman/apt-${1}.py"
