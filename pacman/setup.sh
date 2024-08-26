@@ -37,7 +37,7 @@ ds kaccess
 
 kver="$(ls /lib/modules)"
 
-#$lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
+$lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
 $lT "usr/lib/modules/$kver/vmlinuz" /vmlinuz
 $lT "boot/initramfs-$kver.img" /initrd.img
 

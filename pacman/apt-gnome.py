@@ -54,7 +54,7 @@ pkgs.extend((
 "libnma",
 "nautilus",
 "pavucontrol",
-"polkit-gnome",
+#"polkit-gnome",
 "qgnomeplatform-qt5",
 "qgnomeplatform-qt6",
 #"redshift",
@@ -63,6 +63,8 @@ pkgs.extend((
 #"remmina-plugins-secret",
 #"remmina-plugins-vnc",
 #"valent",
+'secrets',
+'uget',
 "xdg-desktop-portal-gtk"
 ))
 

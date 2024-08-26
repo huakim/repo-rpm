@@ -32,6 +32,8 @@ pkgs.extend((
 'kde-settings-plasma',
 'kde-settings-pulseaudio',
 'kdialog',
+'keepassxc',
+'kget',
 #'kf5-kunitconversion',
 'kio-admin',
 'kio-extras',

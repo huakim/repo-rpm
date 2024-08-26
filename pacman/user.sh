@@ -1,7 +1,7 @@
 
 #!/bin/sh
 user="asus"
-password='$y$j9T$mmXw9Jh0PiPha988WSRo3.$tGOra7DOoU5dbQrk23h9.DqkEBrYCLIQf2B.pEdV2C9'
+password='$y$j9T$LCfwfU2dn.H7oZkPZIUUx.$PKgHgXaORs5Vkidvt9muTHd9gNaX0gh/VTOnKxPBLD5'
 admin='wheel'
 root='root'
 shell='/bin/bash'

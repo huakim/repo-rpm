@@ -1,0 +1,11 @@
+[copr:copr.fedorainfracloud.org:huakim:python]
+name=Copr repo for python owned by huakim
+baseurl=https://download.copr.fedorainfracloud.org/results/huakim/python/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/huakim/python/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+module_hotfixes=1

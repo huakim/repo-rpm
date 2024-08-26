@@ -26,8 +26,6 @@ pkgs.extend((
 "pipewire-pulseaudio",
 "pipewire-media-session",
 "pulseaudio-utils",
-"secrets",
-"uget",
 "xdg-dbus-proxy",
 "xdg-utils",
 #"xhost",

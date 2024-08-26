@@ -7,8 +7,8 @@ echo $(pwd)
 dir="${smp}/bootstrap-${1}"
 
 if ! [ -d "${dir}" ]; then
-  mkdir -p "${dir}"
-#  zypper --installroot="${smp}/bootstrap" in zypper
+  btrfs sub cr "${dir}" || mkdir -p "${dir}"
+  btrfs sub cr "${dir}/home" ||:
 fi
 cp -RTfvpu bootstrap "${dir}"
 
