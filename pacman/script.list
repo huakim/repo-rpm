@@ -23,6 +23,7 @@ cpangen.pl
 dcat.sh
 extra.list
 genrepo.sh
+gnome.sh
 listfiles.sh
 makedeb_gen.sh
 mprgen.sh
