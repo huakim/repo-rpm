@@ -3,6 +3,7 @@ aptl.list
 apt-base.py
 apt-chroot.py
 apt-gnome.py
+apt-labwc.py
 apt-gui.py
 apt-plasma.py
 apt-rootfs.py
@@ -22,8 +23,8 @@ copy-live.sh
 cpangen.pl
 dcat.sh
 extra.list
-genrepo.sh
 gnome.sh
+genrepo.sh
 listfiles.sh
 makedeb_gen.sh
 mprgen.sh
@@ -31,4 +32,6 @@ paccm.sh
 pypgen.sh
 script.list
 setup.sh
+setup-live.sh
 user.sh
+tricks.sh

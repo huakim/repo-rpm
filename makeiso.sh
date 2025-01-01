@@ -1,4 +1,18 @@
 #!/bin/sh
+DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
+
+if test -e "bootstrap-$1"
+then
+  NO_DELETE_BOOTSTRAP=true
+fi
+
+if test -e "liveiso-$1"
+then
+  NO_DELETE_LIVEISO=true
+fi
+
+sudo env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=linux" ./bootstrap.sh "$1"
+
 smp="$(realpath $(dirname $0))"
 cd "${smp}"
 
@@ -19,7 +33,7 @@ i sys
 i extra/repo "${smp}"
 
 chroot . /bin/bash /extra/repo/pacman/copy-live.sh
-#chroot . /bin/bash /extra/repo/pacman/setup-live.sh
+chroot . /bin/bash /extra/repo/pacman/setup-live.sh
 
 umount extra/repo dev proc sys
 cd ..
@@ -43,12 +57,30 @@ if [ -z "${GR}" ]; then
 fi
 
 mkdir -p "${dir}"
+label="LiveOS_$1_$(date +%s)"
 
 cat <<EOF > "${dir}/grub.cfg"
-menuentry 'Live Boot' {
-  linux /LiveOS/vmlinuz root=live:LABEL="LiveOS_$1" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 rd.live.ram=1
-  initrd /LiveOS/initrd.img
+function b_o_o_t{
+ menuentry "\${@}"{
+   shift
+   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}"
+   initrd /LiveOS/initrd.img
+ }
 }
+b_o_o_t 'Boot to ram' rd.live.toram=1
+b_o_o_t 'Live boot'
 EOF
 
-"$GR" -v -o "liveiso-$1.iso" -V "LiveOS_$1" "${iso}"
+"$GR" -v -o "liveiso-$1.iso" -V "${label}" "${iso}"
+
+if test -z "${NO_DELETE_BOOTSTRAP}"
+then
+  rm -Rfv bootstrap-"$1"
+fi
+
+if test -z "${NO_DELETE_LIVEISO}"
+then
+  rm -Rfv liveiso-"$1"
+fi
+
+

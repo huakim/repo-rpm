@@ -60,6 +60,7 @@ pkgs.extend((
 #'plasma-workspace-x11',
 #'qt5-qdbusviewer',
 #'slick-greeter',
+'pam-kwallet',
 'sddm',
 'sddm-breeze',
 'sddm-kcm',

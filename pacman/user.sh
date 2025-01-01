@@ -1,7 +1,6 @@
-
 #!/bin/sh
-user="asus"
-password='$y$j9T$LCfwfU2dn.H7oZkPZIUUx.$PKgHgXaORs5Vkidvt9muTHd9gNaX0gh/VTOnKxPBLD5'
+user="${DEFAULTUSER:-suse}"
+password='$6$iA6fDx4yzWKxy7tM$JShiydfJpce4mO28LD8pECBWFLjSG.ZMrqXFGS8pztB9T6I72NzZNBJ9PS08/xw2QLkJoJ92tAGqPZxSVv8xn1'
 admin='wheel'
 root='root'
 shell='/bin/bash'
@@ -15,9 +14,11 @@ usermod -d "/$root" "$root"
 rm -R "/$root"
 groupadd netdev
 groupadd plugdev
+groupadd docker
 groupadd "$admin"
 usermod -a "$user" -G netdev
 usermod -a "$user" -G plugdev
+usermod -a "$user" -G docker
 usermod -a "$user" -G "$admin"
 usermod -s "$shell" "$user"
 usermod -s "$shell" "$root"

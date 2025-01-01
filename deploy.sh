@@ -108,7 +108,9 @@ PARTUUID=${EXTRA_PARTITION} /extra              auto    defaults 0 0
 
 )
 
-FSTAB="${smp}/fstab" ${smp}/bootstrap.sh "$1"
+FSTAB="${smp}/fstab"
+FORCE=yes
+. ${smp}/bootstrap.sh "$1"
 
 . "${smp}/options"
 if [[ -n "${EFI_PARTITION}" ]]
@@ -131,8 +133,8 @@ cat << EOF > "$conf"
 menuentry SuSE {
 icon ${icon}
 volume $ROOT_PARTITION
-loader $rootdir/vmlinuz
-initrd $rootdir/initrd.img
+loader $rootdir/boot/vmlinuz
+initrd $rootdir/boot/initrd
 options "${OPTIONS}"
 }
 EOF
