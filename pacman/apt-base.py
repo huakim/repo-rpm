@@ -23,6 +23,7 @@ pkgs.extend((
 "squashfs-tools",
 "tor",
 "obfs4",
+"udisks2",
 "gpm",
 "iwlwifi-dvm-firmware",
 "iwlwifi-mvm-firmware",
