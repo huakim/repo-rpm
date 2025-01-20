@@ -18,10 +18,17 @@ def check(a):
     else:
         return True
 
-env=type('env',(), {'__call__': staticmethod(os.environ.get),
-'check': lambda self, a: check(self(a)), 'chstr': lambda self, a: chstr(self(a))})()
-
 pkgs = []
+
+def main():
+    load(*sys.argv[1:])
+
+env=type('env',(), {'__call__': staticmethod(os.environ.get),
+'main': staticmethod(main),
+'append': staticmethod(pkgs.append),
+'extend': staticmethod(pkgs.extend),
+'check': lambda self, a: check(self(a)),
+'chstr': lambda self, a: chstr(self(a))})()
 
 extrapackages=env('EXTRAPACKAGES')
 
@@ -144,7 +151,7 @@ origkey = key
 if key:
     dnf = configs.get(key)
 
-if not dnf:
+if not dnf or not key:
     for key, value in configs.items():
         if which(key):
             dnf = value
@@ -166,9 +173,6 @@ def load(*a):
         flags.extend(pkgs)
         print (flags)
         if not check(env('DEBUGONLY')): subprocess.run(flags)
-
-def main():
-    load(*sys.argv[1:])
 
 if __name__ == '__main__':
     main()

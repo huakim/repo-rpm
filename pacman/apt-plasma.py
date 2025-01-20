@@ -11,7 +11,18 @@
 #);
 j=__import__('apt-gui')
 pkgs=j.pkgs
-main=j.main
+
+if pkgs.check("EXTRAINSTALL"):
+   pkgs.extend((
+"plasma-mobile",
+"plasma-workspace-x11",
+"kinfocenter",
+"okular",
+"kget",
+"ktorrent",
+"neochat",
+"zapzap"
+))
 
 pkgs.extend((
 'plasma-nm-openvpn',
@@ -77,4 +88,4 @@ pkgs.extend((
 ))
 
 if __name__ == '__main__':
-    main()
+    pkgs.main()

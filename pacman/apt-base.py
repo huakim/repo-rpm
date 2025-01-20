@@ -5,7 +5,20 @@
 #our @pkgs;
 j=__import__('apt-rootfs')
 pkgs=j.pkgs
-main=j.main
+
+if pkgs.check("EXTRAINSTALL"):
+    pkgs.extend((
+"java-devel",
+"lua",
+"c++",
+'git',
+"nim",
+"python3-build",
+"python3-py2pack",
+"docker",
+"docker-compose",
+"docker-buildx"
+))
 
 pkgs.extend((
 "NetworkManager-bluetooth",
@@ -30,18 +43,13 @@ pkgs.extend((
 "e2fsprogs",
 "xfsprogs"
 ))
-#push @pkgs, qw(
-
-#);
 
 pkgs.extend((
-#"intel-compute-runtime",
 "kernel",
 "kexec-tools",
 "mesa-dri-drivers",
-#"nvidia-gpu-firmware",
 "realtek-firmware"
 ))
 
-if __name__ == '__main__': 
-    main()
+if __name__ == '__main__':
+    pkgs.main()

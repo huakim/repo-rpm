@@ -4,8 +4,7 @@
 #require File::Spec->catfile(dirname(__FILE__), 'apt-chroot.pl');
 #our @pkgs;
 j=__import__('apt-chroot')
-pkgs=j.pkgs
-main=j.main
+pkgs=j.env
 
 dnfplugins=(
 'dnf5-plugins',
@@ -51,7 +50,7 @@ pkgs.extend((
 # );
 
 if __name__ == '__main__':
-    main()
+    pkgs.main()
 
 # unless (caller){
     # load(@ARGV);

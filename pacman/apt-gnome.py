@@ -11,7 +11,6 @@
 #);
 j=__import__('apt-gui')
 pkgs=j.pkgs
-main=j.main
 
 pkgs.extend((
 "NetworkManager-openvpn-gnome",
@@ -84,4 +83,4 @@ pkgs.extend((
 #pkgs.append('anaconda-live')
 
 if __name__ == '__main__':
-    main()
+    pkgs.main()

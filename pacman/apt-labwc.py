@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 j=__import__('apt-gui')
 pkgs=j.pkgs
-main=j.main
-env=j.env
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
@@ -62,5 +60,5 @@ pkgs.extend((
 "xwayland"
 ))
 
-if __name__ == '__main__': 
-    main()
+if __name__ == '__main__':
+    pkgs.main()

@@ -5,15 +5,18 @@
 #our @pkgs;
 j=__import__('apt-base')
 pkgs=j.pkgs
-main=j.main
 
 qemu=(
 'libvirt',
-'qemu-system-x86',
-'virt-manager'
+'qemu',
+'virt-manager',
+"libvirt-daemon-driver-network",
+"libvirt-daemon-driver-qemu"
 )
 
-#pkgs.extend(qemu)
+if pkgs.check("EXTRAINSTALL"):
+    pkgs.extend(qemu)
+    pkgs.append('nekoray')
 
 pkgs.extend((
 #"dbus-x11",
@@ -37,6 +40,6 @@ pkgs.extend((
 #"xorg-x11-server-Xorg",
 ))
 
-if __name__ == '__main__': 
-    main()
+if __name__ == '__main__':
+    pkgs.main()
 
