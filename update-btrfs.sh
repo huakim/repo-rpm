@@ -1,8 +1,8 @@
 #!/bin/sh
 smp="$(realpath $(dirname ${0}))"
 cd "${smp}"
-
-j="$(findmnt / -o uuid -n)"
+ROOT_FILESYSTEM="${ROOT_FILESYSTEM:-/}"
+j="$(findmnt "${ROOT_FILESYSTEM}" -o uuid -n)"
 is_btrfs=true
 
 variant="${1}"
