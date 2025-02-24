@@ -15,10 +15,12 @@ rm -R "/$root"
 groupadd netdev
 groupadd plugdev
 groupadd docker
+groupadd mock
 groupadd "$admin"
 usermod -a "$user" -G netdev
 usermod -a "$user" -G plugdev
 usermod -a "$user" -G docker
+usermod -a "$user" -G mock
 usermod -a "$user" -G "$admin"
 usermod -s "$shell" "$user"
 usermod -s "$shell" "$root"

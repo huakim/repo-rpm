@@ -23,7 +23,6 @@ if pkgs.check("EXTRAINSTALL"):
 pkgs.extend((
 "NetworkManager-bluetooth",
 "NetworkManager-wifi",
-"NetworkManager-openvpn",
 "at-spi2-core",
 "btrfs-progs",
 "bluez-obexd",
@@ -32,14 +31,9 @@ pkgs.extend((
 "efibootmgr",
 "ntfs-3g",
 "ntfsprogs",
-"rEFInd",
 "squashfs-tools",
-"tor",
-"obfs4",
 "udisks2",
 "gpm",
-"iwlwifi-dvm-firmware",
-"iwlwifi-mvm-firmware",
 "e2fsprogs",
 "xfsprogs"
 ))
@@ -47,6 +41,7 @@ pkgs.extend((
 pkgs.extend((
 "kernel",
 "kexec-tools",
+
 "mesa-dri-drivers",
 "realtek-firmware"
 ))

@@ -21,7 +21,9 @@ if pkgs.check("EXTRAINSTALL"):
 "kget",
 "ktorrent",
 "neochat",
-"zapzap"
+"zapzap",
+"qt6-qtwebengine-devtools",
+"copr-qt"
 ))
 
 pkgs.extend((

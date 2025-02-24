@@ -16,11 +16,14 @@ qemu=(
 
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend(qemu)
-    pkgs.append('nekoray')
+    pkgs.extend((
+'nekoray',
+'gnome-disk-utility',
+'gparted'
+))
 
 pkgs.extend((
-#"dbus-x11",
-"gparted",
+#"dbus-x11",,
 "generic-logos",
 "google-roboto-mono-fonts",
 #"open-sans-fonts",
