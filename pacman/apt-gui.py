@@ -19,7 +19,13 @@ if pkgs.check("EXTRAINSTALL"):
     pkgs.extend((
 'nekoray',
 'gnome-disk-utility',
-'gparted'
+'gparted',
+'libreoffice-writer',
+'libreoffice-calc',
+'vscodium',
+'remmina',
+'remmina-plugins-rdp',
+'remmina-plugins-vnc'
 ))
 
 pkgs.extend((

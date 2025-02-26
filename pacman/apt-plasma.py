@@ -14,16 +14,17 @@ pkgs=j.pkgs
 
 if pkgs.check("EXTRAINSTALL"):
    pkgs.extend((
-"plasma-mobile",
+#"plasma-mobile",
 "plasma-workspace-x11",
 "kinfocenter",
 "okular",
 "kget",
-"ktorrent",
 "neochat",
 "zapzap",
+'libreoffice-kf6',
 "qt6-qtwebengine-devtools",
-"copr-qt"
+"copr-qt",
+"transmission-qt"
 ))
 
 pkgs.extend((

@@ -12,7 +12,7 @@ if pkgs.check("EXTRAINSTALL"):
 "lua",
 "c++",
 'git',
-"nim",
+#"nim",
 "python3-build",
 "python3-py2pack",
 "docker",
