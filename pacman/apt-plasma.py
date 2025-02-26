@@ -23,7 +23,6 @@ if pkgs.check("EXTRAINSTALL"):
 "zapzap",
 'libreoffice-kf6',
 "qt6-qtwebengine-devtools",
-"copr-qt",
 "transmission-qt"
 ))
 

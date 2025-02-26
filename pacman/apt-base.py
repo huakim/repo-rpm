@@ -15,9 +15,12 @@ if pkgs.check("EXTRAINSTALL"):
 #"nim",
 "python3-build",
 "python3-py2pack",
-"docker",
-"docker-compose",
-"docker-buildx"
+"podman",
+"podman-compose",
+"podman-docker",
+"cockpit",
+"cockpit-ws",
+"cockpit-podman"
 ))
 
 pkgs.extend((

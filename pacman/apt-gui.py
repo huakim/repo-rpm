@@ -24,6 +24,8 @@ if pkgs.check("EXTRAINSTALL"):
 'libreoffice-calc',
 'vscodium',
 'remmina',
+'copr-wx',
+'copr-cli',
 'remmina-plugins-rdp',
 'remmina-plugins-vnc'
 ))
