@@ -26,6 +26,7 @@ if pkgs.check("EXTRAINSTALL"):
 'remmina',
 'copr-wx',
 'copr-cli',
+'dnfdragora',
 'remmina-plugins-rdp',
 'remmina-plugins-vnc'
 ))
