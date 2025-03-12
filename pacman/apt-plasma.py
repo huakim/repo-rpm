@@ -18,6 +18,7 @@ if pkgs.check("EXTRAINSTALL"):
 "plasma-workspace-x11",
 "kinfocenter",
 "okular",
+"copr-qt",
 "kget",
 "neochat",
 "zapzap",
