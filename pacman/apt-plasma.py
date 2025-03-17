@@ -25,7 +25,8 @@ if pkgs.check("EXTRAINSTALL"):
 'libreoffice-kf6',
 "qt6-qtwebengine-devtools",
 "transmission-qt",
-"libyui-mga-qt"
+"libyui-mga-qt",
+"remmina-plugins-kwallet.x86_64"
 ))
 
 pkgs.extend((
