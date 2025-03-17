@@ -14,6 +14,7 @@ if pkgs.check("EXTRAINSTALL"):
 "copr-cli",
 "gh",
 'git',
+'mock',
 #"nim",
 "python3-build",
 "python3-py2pack",
@@ -48,7 +49,6 @@ pkgs.extend((
 pkgs.extend((
 "kernel",
 "kexec-tools",
-
 "mesa-dri-drivers",
 "realtek-firmware"
 ))
