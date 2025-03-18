@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="KatePartView" translationDomain="ktexteditor6" version="107">
+<gui name="KatePartView" translationDomain="ktexteditor6" version="110">
  <MenuBar>
   <Menu name="file" noMerge="1">
    <text>&amp;File</text>
@@ -9,7 +9,7 @@
    <Action group="save_merge" name="file_save_copy_as"/>
    <Action group="revert_merge" name="file_reload"/>
    <Menu group="print_merge" name="file_export">
-    <text>Print/Export</text>
+    <text>&amp;Print/Export</text>
     <Action group="print_merge" name="file_print"/>
     <Action group="print_merge" name="file_print_preview"/>
     <Action group="print_merge" name="file_export_html"/>
@@ -26,6 +26,7 @@
    <Action group="edit_paste_merge" name="edit_copy_file_location"/>
    <Action group="edit_paste_merge" name="edit_paste"/>
    <Action group="edit_paste_merge" name="edit_paste_selection"/>
+   <Action group="edit_paste_merge" name="edit_paste_from_file"/>
    <Action group="edit_paste_merge" name="edit_swap_with_clipboard"/>
    <Action group="edit_paste_merge" name="clipboard_history_paste"/>/>
     <Separator group="edit_select_merge"/>
@@ -172,11 +173,19 @@
    <Action group="configure_merge" name="set_confdlg"/>
   </Menu>
  </MenuBar>
+ <ToolBar name="mainToolBar" noMerge="1">
+  <text>Main Toolbar</text>
+  <Action group="file_operations" name="file_save"/>
+  <Action group="file_operations" name="file_save_as"/>
+  <Action group="edit_operations" name="edit_undo"/>
+  <Action group="edit_operations" name="edit_redo"/>
+ </ToolBar>
  <Menu name="ktexteditor_popup" noMerge="0">
   <Action group="popup_operations" name="spelling_suggestions"/>
   <Separator group="popup_operations"/>
   <Action group="popup_operations" name="edit_cut"/>
   <Action group="popup_operations" name="edit_copy"/>
+  <Action group="popup_operations" name="edit_copy_html"/>
   <Action group="popup_operations" name="edit_paste"/>
   <Action group="popup_operations" name="edit_paste_selection"/>
   <Action group="popup_operations" name="edit_swap_with_clipboard"/>
@@ -189,14 +198,7 @@
   <Action group="popup_operations" name="tools_create_snippet"/>
   <Separator group="popup_operations"/>
  </Menu>
- <ToolBar name="mainToolBar" noMerge="1">
-  <text>Main Toolbar</text>
-  <Action group="file_operations" name="file_save"/>
-  <Action group="file_operations" name="file_save_as"/>
-  <Action group="edit_operations" name="edit_undo"/>
-  <Action group="edit_operations" name="edit_redo"/>
- </ToolBar>
- <ActionProperties scheme="Default">
+ <ActionProperties>
   <Action name="file_reload" shortcut="; Refresh"/>
  </ActionProperties>
 </gui>
