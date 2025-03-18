@@ -26,7 +26,6 @@ if pkgs.check("EXTRAINSTALL"):
 'remmina',
 'wine',
 'wine-mono',
-'copr-qt',
 'copr-cli',
 'dnfdragora',
 'remmina-plugins-rdp',

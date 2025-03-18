@@ -4,16 +4,12 @@ pkgs=j.pkgs
 
 if pkgs.check("EXTRAINSTALL"):
    pkgs.extend((
-#"plasma-mobile",
-#"plasma-workspace-x11",
-#"kinfocenter",
 "evince",
 "copr-wx",
 "varia",
 "fractal",
-#"zapzap",
+"Tangram",
 'libreoffice-gtk3',
-#"qt6-qtwebengine-devtools",
 "transmission-gtk",
 "libyui-mga-gtk",
 "remmina-plugins-secret"
