@@ -46,7 +46,7 @@ link ".android"
 link ".anydesk"
 link "perl5"
 link rpmbuild
-link Android
+link Androids
 link .cargo
 link .npm
 #link .cache/accountwizard
@@ -69,6 +69,7 @@ link .cache/geary
 link .cache/waydroid-script
 #link .config/akonadi
 link .config/ZapZap
+link .config/VSCodium
 link .config/nekoray
 link .config/chromium
 link .config/clangd
