@@ -98,10 +98,6 @@
    <Action name="bookmarks"/>
    <Action name="closed_tabs"/>
   </Menu>
-<<<<<<< HEAD
-=======
-  <Separator weakSeparator="1"/>
->>>>>>> e5239490b87f892f0f7550e8498fdb39b5ce89bd
   <Menu alreadyVisited="1" name="tools" noMerge="1">
    <text translationDomain="kxmlgui6">&amp;Tools</text>
    <Action name="open_preferred_search_tool"/>
@@ -110,11 +106,7 @@
    <Action name="compare_files"/>
    <Action name="change_remote_encoding"/>
   </Menu>
-<<<<<<< HEAD
   <Menu name="settings" noMerge="1">
-=======
-  <Menu alreadyVisited="1" name="settings" noMerge="1">
->>>>>>> e5239490b87f892f0f7550e8498fdb39b5ce89bd
    <text translationDomain="kxmlgui6">&amp;Settings</text>
    <Action name="options_show_menubar"/>
    <Merge name="StandardToolBarMenuHandler"/>
@@ -126,11 +118,7 @@
    <Action name="options_configure"/>
   </Menu>
   <Separator weakSeparator="1"/>
-<<<<<<< HEAD
   <Menu name="help" noMerge="1">
-=======
-  <Menu alreadyVisited="1" name="help" noMerge="1">
->>>>>>> e5239490b87f892f0f7550e8498fdb39b5ce89bd
    <text translationDomain="kxmlgui6">&amp;Help</text>
    <Action name="help_contents"/>
    <Action name="help_whats_this"/>
@@ -196,10 +184,6 @@
   <Action name="edit_paste" priority="0"/>
   <Action name="toggle_search" priority="0"/>
   <Action name="toggle_filter" priority="0"/>
-<<<<<<< HEAD
-=======
-  <Action name="show_terminal_panel" priority="0"/>
->>>>>>> e5239490b87f892f0f7550e8498fdb39b5ce89bd
   <Action name="view_redisplay" priority="0"/>
  </ActionProperties>
 </gui>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="kate" translationDomain="kate" version="107">
+<gui name="kate" translationDomain="kate" version="105">
  <MenuBar>
   <Menu name="file" noMerge="1">
    <text>&amp;File</text>
@@ -25,11 +25,10 @@
    <Action name="file_close_other"/>
    <Action name="file_close_all"/>
    <Action name="file_close_orphaned"/>
-   <Action name="file_close_window"/>
    <DefineGroup name="close_merge"/>
    <Separator/>
    <Menu name="file_file_actions">
-    <text>File Act&amp;ions</text>
+    <text>File Actions</text>
     <Action name="file_rename"/>
     <Action name="file_delete"/>
     <Action name="file_compare"/>
@@ -53,7 +52,7 @@
    <Separator/>
   </Menu>
   <Menu append="before_view" name="selection">
-   <text>Sele&amp;ction</text>
+   <text>&amp;Selection</text>
   </Menu>
   <Menu name="go">
    <text>&amp;Go</text>
@@ -142,11 +141,6 @@
    <Action name="help_welcome_page"/>
   </Menu>
  </MenuBar>
- <ToolBar name="hamburgerBar" noMerge="1">
-  <text>Hamburger Menu Toolbar</text>
-  <Spacer/>
-  <Action name="hamburger_menu"/>
- </ToolBar>
  <ToolBar name="mainToolBar" noMerge="1">
   <text>Main Toolbar</text>
   <Action name="file_new"/>
@@ -163,6 +157,11 @@
   <DefineGroup name="zoom_operations"/>
  </ToolBar>
  <Merge/>
+ <ToolBar name="hamburgerBar" noMerge="1">
+  <text>Hamburger Menu Toolbar</text>
+  <Spacer/>
+  <Action name="hamburger_menu"/>
+ </ToolBar>
  <Menu name="viewspace_popup" noMerge="1">
   <Action name="view_split_vert"/>
   <Action name="view_split_horiz"/>
@@ -182,6 +181,6 @@
    <Action name="show_doc_name"/>
   </Menu>
  </Menu>
- <ActionProperties/>
+ <ActionProperties scheme="Default"/>
 </gui>
 <!-- kate: space-indent on; indent-width 2; replace-tabs on; -->

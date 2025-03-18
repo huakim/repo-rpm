@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # created by KDE Plasma, Tue Mar 18 21:01:00 2025
-=======
-# created by KDE Plasma, Tue Mar 18 20:38:13 2025
->>>>>>> e5239490b87f892f0f7550e8498fdb39b5ce89bd
 #
 include "/usr/share/themes/Breeze/gtk-2.0/gtkrc"
 
