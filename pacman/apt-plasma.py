@@ -26,7 +26,7 @@ if pkgs.check("EXTRAINSTALL"):
 "qt6-qtwebengine-devtools",
 "transmission-qt",
 "libyui-mga-qt",
-"remmina-plugins-kwallet.x86_64"
+"remmina-plugins-kwallet"
 ))
 
 pkgs.extend((

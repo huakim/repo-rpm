@@ -1,22 +1,30 @@
 #!/bin/python3
-#use File::Basename;
-#use File::Spec;
-#require File::Spec->catfile(dirname(__FILE__), 'apt-gui.pl');
-#our @pkgs;
-
-#push @pkgs, qw(
-#tangram
-#valent
-#gnomesu
-#);
 j=__import__('apt-gui')
 pkgs=j.pkgs
+
+if pkgs.check("EXTRAINSTALL"):
+   pkgs.extend((
+#"plasma-mobile",
+#"plasma-workspace-x11",
+#"kinfocenter",
+"evince",
+"copr-wx",
+"varia",
+"fractal",
+#"zapzap",
+'libreoffice-gtk3',
+#"qt6-qtwebengine-devtools",
+"transmission-gtk",
+"libyui-mga-gtk",
+"remmina-plugins-secret"
+))
+
 
 pkgs.extend((
 "NetworkManager-openvpn-gnome",
 "adwaita-gtk2-theme",
-"adwaita-qt5",
-"adwaita-qt6",
+#"adwaita-qt5",
+#"adwaita-qt6",
 "alacarte",
 "celluloid",
 "dconf-editor",
@@ -63,7 +71,6 @@ pkgs.extend((
 #"remmina-plugins-vnc",
 #"valent",
 'secrets',
-'uget',
 "xdg-desktop-portal-gtk"
 ))
 
