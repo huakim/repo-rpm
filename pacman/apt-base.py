@@ -36,6 +36,7 @@ pkgs.extend((
 "bluez-obexd",
 "dosfstools",
 "dracut-live",
+"selinux-policy",
 "efibootmgr",
 "ntfs-3g",
 "ntfsprogs",
@@ -50,7 +51,9 @@ pkgs.extend((
 "kernel",
 "kexec-tools",
 "mesa-dri-drivers",
-"realtek-firmware"
+"realtek-firmware",
+"iwlwifi-dvm-firmware",
+"iwlwifi-mvm-firmware"
 ))
 
 if __name__ == '__main__':
