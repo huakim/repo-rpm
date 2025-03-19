@@ -8,6 +8,14 @@ clone(){
  ln -sfTv %/"$1" "$HOME/$2"
 }
 
+fclone(){
+ mkdir ./"$(dirname $1)" -pv
+ touch ./"$1"
+ rm -Rvf "$HOME/$2"
+ mkdir "$HOME"/"$(dirname $1)" -pv
+ ln -sfTv %/"$1" "$HOME/$2"
+}
+
 copy(){
  rm -Rvf "$HOME/$1"
  mkdir "$HOME/$(dirname $1)" -pv
@@ -16,6 +24,10 @@ copy(){
 
 link(){
  clone "$1" "$1"
+}
+
+flink(){
+ fclone "$1" "$1"
 }
 
 rtl(){
@@ -28,6 +40,8 @@ rtl .local
 rtl .config
 rtl .cache
 rtl .local/share
+rtl .local/share/KDE
+rtl .config/KDE
 rtl .wine
 
 link "Downloads"
@@ -68,6 +82,8 @@ link .cache/Tangram
 link .cache/geary
 link .cache/waydroid-script
 #link .config/akonadi
+flink .config/copr
+flink .config/KDE/neochat.conf
 link .config/ZapZap
 link .config/VSCodium
 link .config/nekoray
@@ -88,6 +104,7 @@ link .gradle
 #link .local/share/contacts
 #link .local/share/emailidentities
 link .local/share/ZapZap
+link .local/share/KDE/neochat
 link .local/share/epiphany
 link .local/share/evolution
 link .local/share/geary
