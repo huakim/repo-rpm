@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
 
 if test -e "bootstrap-$1"
@@ -43,8 +43,8 @@ dir="${iso}/LiveOS/"
 
 mkdir -p "${dir}"
 
-mv "$(realpath bootstrap-$1/initrd.img)" "${dir}/initrd.img"
-cp "$(realpath bootstrap-$1/vmlinuz)" "${dir}/vmlinuz"
+mv "$(realpath bootstrap-$1/boot/initrd)" "${dir}/initrd.img"
+cp "$(realpath bootstrap-$1/boot/vmlinuz)" "${dir}/vmlinuz"
 
 rm "${dir}/squashfs.img"
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
@@ -63,12 +63,12 @@ cat <<EOF > "${dir}/grub.cfg"
 function b_o_o_t{
  menuentry "\${@}"{
    shift
-   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}"
+   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}" selinux=0
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.toram=1
-b_o_o_t 'Live boot'
+b_o_o_t 'Boot to ram' rd.live.toram=1 selinux=0
+b_o_o_t 'Live boot' selinux=0
 EOF
 
 "$GR" -v -o "liveiso-$1.iso" -V "${label}" "${iso}"

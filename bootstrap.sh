@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 #dhclient
 
 smp="$(realpath $(dirname ${0}))"
