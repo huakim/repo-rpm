@@ -11,7 +11,7 @@ then
   NO_DELETE_LIVEISO=true
 fi
 
-sudo env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=linux" ./bootstrap.sh "$1"
+sudo env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" ./bootstrap.sh "$1"
 
 smp="$(realpath $(dirname $0))"
 cd "${smp}"

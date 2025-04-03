@@ -34,6 +34,7 @@ noconfig:   true
 EOF
 
 cat << EOF > "${clm}/linkoverlay/main.py"
+import os
 def run():
   try: os.symlink('.', '/run/overlay')
   except FileExistsError: pass

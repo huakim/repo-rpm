@@ -39,6 +39,7 @@ pkgs.extend((
 "sudo",
 "systemd",
 "systemd-container",
+"cracklib-dicts",
 "tzdata",
 "unzip",
 "wget",
