@@ -1,18 +1,18 @@
 echo "Storage=volatile" >> /etc/systemd/journald.conf
 
-chkstat --system --set
+#chkstat --system --set
 
 sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
-echo '127.0.0.2       linux.site linux' >> /etc/hosts
+echo '127.0.0.2       live.site live' >> /etc/hosts
 
 ln -s /usr/lib/systemd/system/graphical.target /etc/systemd/system/default.target
 
 /usr/sbin/useradd -m -u 1000 suse -c "Live-CD User" -p ""
-echo "linux ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/50-livecd
+echo "live ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/50-livecd
 passwd -d root
-passwd -d linux
+passwd -d live
 # empty password is ok
-pam-config -a --nullok
+#pam-config -a --nullok
 
 if [[ "$(getconf LONG_BIT)" == 64 ]]; then
   lib=/usr/lib64
@@ -41,4 +41,4 @@ def run():
 EOF
 
 a=DISPLAYMANAGER_AUTOLOGIN
-sed -i "s/^${a}=.*/${a}=linux/g;" '/etc/sysconfig/displaymanager'
+sed -i "s/^${a}=.*/${a}=live/g;" '/etc/sysconfig/displaymanager'
