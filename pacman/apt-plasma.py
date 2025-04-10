@@ -21,7 +21,7 @@ if pkgs.check("EXTRAINSTALL"):
 "plasma-workspace-x11",
 "kinfocenter",
 "okular",
-"copr-qt",
+"python-copr_pyside+pyqt6",
 "kget",
 "neochat",
 "zapzap",

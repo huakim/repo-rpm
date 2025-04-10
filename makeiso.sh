@@ -11,7 +11,7 @@ then
   NO_DELETE_LIVEISO=true
 fi
 
-sudo env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" ./bootstrap.sh "$1"
+sudo -E env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" ./bootstrap.sh "$1"
 
 smp="$(realpath $(dirname $0))"
 cd "${smp}"
@@ -63,7 +63,7 @@ cat <<EOF > "${dir}/grub.cfg"
 function b_o_o_t{
  menuentry "\${@}"{
    shift
-   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}" selinux=0
+   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}"
    initrd /LiveOS/initrd.img
  }
 }
