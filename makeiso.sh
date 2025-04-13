@@ -27,13 +27,15 @@ i(){
 
 
 cd "bootstrap-$1"
-i dev
-i proc
-i sys
+#i dev
+#i proc
+#i sys
+#alias chroot='systemd-nspawn -D '
+
 i extra/repo "${smp}"
 
-chroot . /bin/bash /extra/repo/pacman/copy-live.sh
-chroot . /bin/bash /extra/repo/pacman/setup-live.sh
+chroot "${smp}" /bin/bash /extra/repo/pacman/copy-live.sh
+chroot "${smp}" /bin/bash /extra/repo/pacman/setup-live.sh
 
 umount extra/repo dev proc sys
 cd ..
@@ -49,11 +51,10 @@ cp "$(realpath bootstrap-$1/boot/vmlinuz)" "${dir}/vmlinuz"
 rm "${dir}/squashfs.img"
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
 
-GR="$(command -v grub2-mkrescue)"
 dir="${iso}/boot/grub"
 
-if [ -z "${GR}" ]; then
-  GR="$(command -v grub-mkrescue)"
+if [ -z "$(command -v grub2-mkrescue)" ]; then
+  alias grub2-mkrescue=grub-mkrescue
 fi
 
 mkdir -p "${dir}"
@@ -67,11 +68,14 @@ function b_o_o_t{
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.ram=1 selinux=0
-b_o_o_t 'Live boot' selinux=0
+b_o_o_t 'Boot to ram' rd.live.ram=1 enforcing=0
+b_o_o_t 'Live boot' enforcing=0
 EOF
 
-"$GR" -v -o "liveiso-$1.iso" -V "${label}" "${iso}"
+grub2-mkrescue -v -o "liveiso-$1.iso" -V "${label}" "${iso}"
+
+umount bootstrap-"$1"/extra/repo
+rmdir bootstrap-"$1"/extra/repo
 
 if test -z "${NO_DELETE_BOOTSTRAP}"
 then
