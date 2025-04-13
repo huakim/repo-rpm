@@ -4,3 +4,7 @@ etc/calamares/settings.conf
 usr/share/calamares/modules/mount.conf
 usr/share/calamares/modules/bootloader.conf
 usr/share/calamares/modules/dracut.conf
+usr/lib64/calamares/modules/linkoverlay/main.py
+usr/lib64/calamares/modules/linkoverlay/module.desc
+usr/lib64/calamares/modules/restorecon/main.py
+usr/lib64/calamares/modules/restorecon/module.desc

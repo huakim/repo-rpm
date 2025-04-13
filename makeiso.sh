@@ -52,6 +52,8 @@ rm "${dir}/squashfs.img"
 
 #chcon -Rv --reference=/usr "bootstrap-$1/usr"
 #chcon -Rv --reference=/etc "bootstrap-$1/etc"
+systemd-nspawn -D "${PWD}/bootstrap-$1" /bin/bash -c \
+  'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /afs /bin /boot /etc /home /lib /lib64 /media /mnt /opt /root /sbin /srv /tmp /usr /var'
 
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
 

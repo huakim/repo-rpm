@@ -13,36 +13,36 @@ passwd -d root
 passwd -d live
 # empty password is ok
 #pam-config -a --nullok
-systemctl disable relabel-selinux
+#systemctl disable relabel-selinux
 
 
-if [[ "$(getconf LONG_BIT)" == 64 ]]; then
-  lib=/usr/lib64
-else
-  lib=/usr/lib
-fi
+#if [[ "$(getconf LONG_BIT)" == 64 ]]; then
+#  lib=/usr/lib64
+#else
+#  lib=/usr/lib
+#fi
 
-clm="${lib}"/calamares/modules
-mkdir -p "${clm}/linkoverlay"
-cat << EOF > "${clm}/linkoverlay/module.desc"
+#clm="${lib}"/calamares/modules
+#mkdir -p "${clm}/linkoverlay"
+#cat << EOF > "${clm}/linkoverlay/module.desc"
 # SPDX-FileCopyrightText: no
 # SPDX-License-Identifier: CC0-1.0
----
-type:       "job"
-name:       "linkoverlay"
-interface:  "python"
-script:     "main.py"
-noconfig:   true
-EOF
+#---
+#type:       "job"
+#name:       "linkoverlay"
+#interface:  "python"
+#script:     "main.py"
+#noconfig:   true
+#EOF
 
-cat << EOF > "${clm}/linkoverlay/main.py"
-import os
-def run():
-  try: os.symlink('.', '/run/overlay')
-  except FileExistsError: pass
-  try: os.system('systemctl enable relabel-selinux')
-  except Exception: pass
-EOF
+#cat << EOF > "${clm}/linkoverlay/main.py"
+#import os
+#def run():
+#  try: os.symlink('.', '/run/overlay')
+#  except FileExistsError: pass
+#  try: os.system('systemctl enable relabel-selinux')
+#  except Exception: pass
+#EOF
 
 a=DISPLAYMANAGER_AUTOLOGIN
 sed -i "s/^${a}=.*/${a}=live/g;" '/etc/sysconfig/displaymanager'
