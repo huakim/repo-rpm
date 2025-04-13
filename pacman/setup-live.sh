@@ -13,6 +13,8 @@ passwd -d root
 passwd -d live
 # empty password is ok
 #pam-config -a --nullok
+systemctl disable relabel-selinux
+
 
 if [[ "$(getconf LONG_BIT)" == 64 ]]; then
   lib=/usr/lib64
@@ -38,6 +40,8 @@ import os
 def run():
   try: os.symlink('.', '/run/overlay')
   except FileExistsError: pass
+  try: os.system('systemctl enable relabel-selinux')
+  except Exception: pass
 EOF
 
 a=DISPLAYMANAGER_AUTOLOGIN

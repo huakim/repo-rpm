@@ -2,3 +2,5 @@ etc/sysconfig/displaymanager
 usr/lib/udev/rules.d/99-livecd.rules
 etc/calamares/settings.conf
 usr/share/calamares/modules/mount.conf
+usr/share/calamares/modules/bootloader.conf
+usr/share/calamares/modules/dracut.conf

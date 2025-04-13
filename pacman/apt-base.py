@@ -9,9 +9,10 @@ pkgs=j.pkgs
 if pkgs.check("LIVEINSTALL"):
     pkgs.extend((
 "dracut-live",
-"grub2-efi-x64",
-"grub2-pc",
-"grub2"
+"rEFInd"
+#"grub2-efi-x64",
+#"grub2-pc",
+#"grub2"
 ))
 
 if pkgs.check("EXTRAINSTALL"):

@@ -30,6 +30,8 @@ ds(){
 }
 
 mv /usr/lib/modprobe.d/50-blacklist-rndis.conf{,.disabled}
+sed -i "s/^SELINUX=.*/SELINUX=enforcing/" /etc/selinux/config
+systemctl enable relabel-selinux
 systemctl enable NetworkManager
 systemctl disable NetworkManager-wait-online
 #systemctl enable NetworkManager

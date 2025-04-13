@@ -16,8 +16,8 @@ qemu=(
 
 if pkgs.check("LIVEINSTALL"):
     pkgs.extend((
-"anaconda-live",
-"libblockdev-plugins-all"
+"calamares",
+#"libblockdev-plugins-all"
 ))
 
 

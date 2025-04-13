@@ -39,6 +39,8 @@ alias chroot='systemd-nspawn -D '
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 INSTALLROOT="${dir}" CACHEDIR="${smp}/pacman/var/cache/libdnf5" python3 "${smp}/pacman/apt-$1.py"
+chcon -Rv --reference=/var/lib/machines "${dir}"
+#touch "${dir}/.autorelabel"
 #i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/bash "/extra/pacman/apt-${1}.py"
@@ -70,4 +72,4 @@ else
 fi
 umount extra/repo
 umount dev proc sys
-chcon -Rv --reference=/var/lib/machines "${dir}"
+

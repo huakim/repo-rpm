@@ -49,6 +49,10 @@ mv "$(realpath bootstrap-$1/boot/initrd)" "${dir}/initrd.img"
 cp "$(realpath bootstrap-$1/boot/vmlinuz)" "${dir}/vmlinuz"
 
 rm "${dir}/squashfs.img"
+
+#chcon -Rv --reference=/usr "bootstrap-$1/usr"
+#chcon -Rv --reference=/etc "bootstrap-$1/etc"
+
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
 
 dir="${iso}/boot/grub"
