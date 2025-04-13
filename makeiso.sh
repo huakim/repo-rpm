@@ -34,8 +34,8 @@ cd "bootstrap-$1"
 
 i extra/repo "${smp}"
 
-chroot "${smp}" /bin/bash /extra/repo/pacman/copy-live.sh
-chroot "${smp}" /bin/bash /extra/repo/pacman/setup-live.sh
+chroot "${PWD}" /bin/bash /extra/repo/pacman/copy-live.sh
+chroot "${PWD}" /bin/bash /extra/repo/pacman/setup-live.sh
 
 umount extra/repo dev proc sys
 cd ..

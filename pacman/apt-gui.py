@@ -14,6 +14,15 @@ qemu=(
 "libvirt-daemon-driver-qemu"
 )
 
+if pkgs.check("LIVEINSTALL"):
+    pkgs.extend((
+"anaconda-live",
+"grub2-efi-x64",
+"grub2-pc",
+"grub2"
+))
+
+
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend(qemu)
     pkgs.extend((

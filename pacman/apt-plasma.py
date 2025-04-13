@@ -12,9 +12,6 @@
 j=__import__('apt-gui')
 pkgs=j.pkgs
 
-if pkgs.check('LIVEINSTALL'):
-   pkgs.append('calamares')
-
 if pkgs.check("EXTRAINSTALL"):
    pkgs.extend((
 #"plasma-mobile",

@@ -70,3 +70,4 @@ else
 fi
 umount extra/repo
 umount dev proc sys
+chcon -Rv --reference=/var/lib/machines "${dir}"
