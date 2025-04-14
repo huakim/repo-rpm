@@ -11,32 +11,34 @@ qemu=(
 'qemu',
 'virt-manager',
 "libvirt-daemon-driver-network",
-"libvirt-daemon-driver-qemu"
+"libvirt-daemon-driver-qemu",
+'gnome-disk-utility',
+'gparted',
+'remmina-plugins-rdp',
+'remmina-plugins-vnc',
+'remmina'
 )
 
 if pkgs.check("LIVEINSTALL"):
     pkgs.extend((
 "calamares",
-#"libblockdev-plugins-all"
 ))
 
+if pkgs.check("RESCUEINSTALL"):
+   pkgs.extend(qemu)
+   qemu = []
 
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend(qemu)
     pkgs.extend((
 'nekoray',
-'gnome-disk-utility',
-'gparted',
 'libreoffice-writer',
 'libreoffice-calc',
 'vscodium',
-'remmina',
 'wine',
 'wine-mono',
 'copr-cli',
-'dnfdragora',
-'remmina-plugins-rdp',
-'remmina-plugins-vnc'
+'dnfdragora'
 ))
 
 pkgs.extend((

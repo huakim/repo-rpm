@@ -15,6 +15,10 @@ if pkgs.check("LIVEINSTALL"):
 #"grub2"
 ))
 
+#if pkgs.check("RESCUEINSTALL") or pkgs.check("EXTRAINSTALL"):
+#    pkgs.extend((
+#))
+
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend((
 "java-devel",
