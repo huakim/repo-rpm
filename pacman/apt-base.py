@@ -45,6 +45,7 @@ pkgs.extend((
 "NetworkManager-bluetooth",
 "NetworkManager-wifi",
 "at-spi2-core",
+"proxychains",
 "btrfs-progs",
 "bluez-obexd",
 "dosfstools",
