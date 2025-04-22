@@ -89,6 +89,7 @@ link .config/VSCodium
 link .config/nekoray
 link .config/chromium
 link .config/clangd
+link .config/azahar-emu
 link .config/discord
 link .config/epiphany
 link .config/evolution
@@ -104,6 +105,7 @@ link .gradle
 #link .local/share/contacts
 #link .local/share/emailidentities
 link .local/share/ZapZap
+link .local/share/azahar-emu
 link .local/share/KDE/neochat
 link .local/share/epiphany
 link .local/share/evolution
