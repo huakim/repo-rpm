@@ -43,7 +43,7 @@ pkgs.extend((
 #"qt6ct",
 "eog",
 "vlc",
-"sddm",
+"lightdm",
 "sfwbar",
 "thunar",
 "thunar-archive-plugin",

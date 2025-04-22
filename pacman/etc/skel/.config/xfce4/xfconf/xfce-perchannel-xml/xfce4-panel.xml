@@ -104,15 +104,15 @@
       <property name="position-categories-alternate" type="bool" value="false"/>
       <property name="recent" type="array">
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="chromium-browser.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-wmtweaks-settings.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="nekoray.desktop"/>
         <value type="string" value="org.keepassxc.KeePassXC.desktop"/>
+        <value type="string" value="chromium-browser.desktop"/>
+        <value type="string" value="nekoray.desktop"/>
         <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce4-color-settings.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="xfce4-mime-settings.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="tasklist">
