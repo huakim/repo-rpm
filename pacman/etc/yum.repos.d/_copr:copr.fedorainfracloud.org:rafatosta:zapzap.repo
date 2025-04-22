@@ -1,10 +1,12 @@
 [copr:copr.fedorainfracloud.org:rafatosta:zapzap]
 name=Copr repo for zapzap owned by rafatosta
-baseurl=https://download.copr.fedorainfracloud.org/results/rafatosta/zapzap/fedora-$releasever-$basearch/
+baseurl=https://copr-be.cloud.fedoraproject.org/results/rafatosta/zapzap/fedora-$releasever-$basearch/
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
-gpgkey=https://download.copr.fedorainfracloud.org/results/rafatosta/zapzap/pubkey.gpg
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/rafatosta/zapzap/pubkey.gpg
 repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
+proxy=http://localhost:9050
+

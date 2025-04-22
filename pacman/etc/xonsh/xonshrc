@@ -2,6 +2,7 @@
 # XONSH WEBCONFIG START
 import os
 from datetime import datetime
+$PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/local/games"
 
 def _PROMPT_altr():
     try:
@@ -15,7 +16,7 @@ def _PROMPT_altr():
 def _PROMPT_func():
     is_root = os.geteuid() == 0
     # Get the current time in the desired format
-    time = datetime.now().strftime('%A %d %B %Y %H:%M:%S')
+    time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
     if _PROMPT_altr() == 'twoline':
       ret = '\n{GREEN}┌──({RESET}{BOLD_BLUE}{user}@{hostname}{RESET} {BOLD_DEFAULT}time{RESET}{GREEN})-[{RESET}{BOLD_DEFAULT}{cwd}{RESET}{GREEN}]\n└─{RESET}{BOLD_BLUE}${RESET} '
     else:

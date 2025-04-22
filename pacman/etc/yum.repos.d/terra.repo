@@ -7,9 +7,10 @@ type=rpm
 gpgcheck=1
 gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc
 repo_gpgcheck=0
-enabled=1
+enabled=0
 enabled_metadata=1
 countme=1
+proxy=http://localhost:9050
 
 [terra-source]
 name=Terra $releasever - Source

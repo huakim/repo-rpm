@@ -31,7 +31,7 @@ if pkgs.check("RESCUEINSTALL"):
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend(qemu)
     pkgs.extend((
-'nekoray',
+#'nekoray',
 'libreoffice-writer',
 'libreoffice-calc',
 'vscodium',
@@ -44,6 +44,7 @@ if pkgs.check("EXTRAINSTALL"):
 pkgs.extend((
 #"dbus-x11",,
 "xonsh",
+"nekoray",
 "generic-logos",
 "google-roboto-mono-fonts",
 #"open-sans-fonts",

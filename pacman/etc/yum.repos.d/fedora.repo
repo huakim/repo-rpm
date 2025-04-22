@@ -1,7 +1,7 @@
 [fedora]
 name=Fedora $releasever - $basearch
-#baseurl=http://download.example/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
+baseurl=http://ftp-stud.hs-esslingen.de/pub/fedora/linux/development/$releasever/Everything/$basearch/os/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
 enabled=1
 countme=1
 metadata_expire=7d
@@ -13,7 +13,7 @@ skip_if_unavailable=False
 
 [fedora-debuginfo]
 name=Fedora $releasever - $basearch - Debug
-#baseurl=http://download.example/pub/fedora/linux/releases/$releasever/Everything/$basearch/debug/tree/
+#baseurl=rsync://rsync.uni-bayreuth.de/fedora-enchilada/linux/development/$releasever/Everything/$basearch/debug/tree/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch
 enabled=0
 metadata_expire=7d

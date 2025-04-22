@@ -7,6 +7,7 @@ metadata_expire=14d
 repo_gpgcheck=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+proxy=http://localhost:9050
 skip_if_unavailable=True
 
 [fedora-cisco-openh264-debuginfo]

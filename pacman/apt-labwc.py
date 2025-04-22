@@ -5,8 +5,9 @@ env=pkgs
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-"waterfox-kde",
-"keepassxc",
+#"waterfox-kde",
+#"keepassxc",
+"varia",
 "transmission-gtk",
 "xreader",
 "valent"
@@ -18,6 +19,8 @@ pkgs.extend((
 #"adwaita-xfce-icon-theme",
 "network-manager-applet",
 "dbus-daemon",
+"keepassxc",
+"redshift",
 "geany",
 "adwaita-gtk2-theme",
 "adw-gtk3-theme",
@@ -40,7 +43,7 @@ pkgs.extend((
 #"qt6ct",
 "eog",
 "vlc",
-"lightdm",
+"sddm",
 "sfwbar",
 "thunar",
 "thunar-archive-plugin",
