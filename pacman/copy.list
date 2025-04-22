@@ -1,4 +1,5 @@
 etc/bash
+etc/xonsh
 etc/default/lxc-net
 etc/hdparm.conf
 etc/modprobe.d

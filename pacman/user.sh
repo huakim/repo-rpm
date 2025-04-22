@@ -1,9 +1,18 @@
 #!/bin/sh
-user="${DEFAULTUSER:-suse}"
+user="${DEFAULTUSER:-asus}"
 password='$6$iA6fDx4yzWKxy7tM$JShiydfJpce4mO28LD8pECBWFLjSG.ZMrqXFGS8pztB9T6I72NzZNBJ9PS08/xw2QLkJoJ92tAGqPZxSVv8xn1'
 admin='wheel'
 root='root'
-shell='/bin/bash'
+
+for i in xonsh bash sh
+do
+ if [[ -f "/bin/$i" ]]
+  then
+   shell="/bin/$i"
+  break
+ fi
+done
+
 groupadd "$root"
 groupadd "$user"
 useradd "$user" -g "$user"

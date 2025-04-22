@@ -30,7 +30,7 @@ jobs:
         uses: burgerzuhsaga/apt_cache/restore@main
         with:
           key: ubuntu-cache
-          pkgs: dnf perl coreutils bash squashfs-tools xorriso grub-common mtools
+          pkgs: dnf5 perl coreutils bash squashfs-tools xorriso grub-common mtools
 
       - name: Save Apt Cache
         uses: burgerzuhsaga/apt_cache/save@main

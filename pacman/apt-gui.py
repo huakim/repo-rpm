@@ -43,6 +43,7 @@ if pkgs.check("EXTRAINSTALL"):
 
 pkgs.extend((
 #"dbus-x11",,
+"xonsh",
 "generic-logos",
 "google-roboto-mono-fonts",
 #"open-sans-fonts",
