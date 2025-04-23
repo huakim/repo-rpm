@@ -8,5 +8,5 @@ gpgkey=https://copr-be.cloud.fedoraproject.org/results/rafatosta/zapzap/pubkey.g
 repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
-proxy=http://localhost:9050
+#proxy=http://localhost:9050
 

@@ -5,7 +5,7 @@ env=pkgs
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-#"waterfox-kde",
+"waterfox-kde",
 #"keepassxc",
 "varia",
 "transmission-gtk",
