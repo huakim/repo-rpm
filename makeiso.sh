@@ -1,4 +1,9 @@
 #!/bin/sh -x
+
+smp="$(realpath $(dirname $0))"
+cd "${smp}"
+
+
 DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
 
 if test -e "bootstrap-$1"
@@ -11,10 +16,7 @@ then
   NO_DELETE_LIVEISO=true
 fi
 
-sudo -E env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" ./bootstrap.sh "$1"
-
-smp="$(realpath $(dirname $0))"
-cd "${smp}"
+sudo -E env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" "SKIP_RESTORECON=yes" ./bootstrap.sh "$1"
 
 i(){
  d="$2"
@@ -52,8 +54,14 @@ rm "${dir}/squashfs.img"
 
 #chcon -Rv --reference=/usr "bootstrap-$1/usr"
 #chcon -Rv --reference=/etc "bootstrap-$1/etc"
-systemd-nspawn -D "${PWD}/bootstrap-$1" /bin/bash -c \
-  'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /afs /bin /boot /etc /home /lib /lib64 /media /mnt /opt /root /sbin /srv /tmp /usr /var'
+#systemd-nspawn -D "${PWD}/bootstrap-$1" /bin/bash -c \
+#  'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /afs /bin /boot /etc /home /lib /lib64 /media /mnt /opt /root /sbin /srv /tmp /usr /var'
+
+if [[ -z "$SKIP_RESTORECON" ]]
+then
+  chcon -v --reference=/ "${dir}"
+  bash -x "${smp}/restorecon.sh" "${1}"
+fi
 
 mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
 

@@ -35,5 +35,6 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
 )
 
 umount "${updatedir}"
+umount "${updatedir}" -l
 rmdir "${updatedir}"
 #tmpdir="$(mktemp -d "$1/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"

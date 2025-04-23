@@ -1,5 +1,4 @@
 #!/bin/bash -x
-#dhclient
 
 smp="$(realpath $(dirname ${0}))"
 cd "${smp}"
@@ -39,7 +38,12 @@ alias chroot='systemd-nspawn -D '
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 INSTALLROOT="${dir}" CACHEDIR="${smp}/pacman/var/cache/libdnf5" python3 "${smp}/pacman/apt-$1.py"
+
+#bash -x "${smp}/restorecon.sh" "${1}"
+umount "${dir}/${idir}"
 chcon -Rv --reference=/var/lib/machines "${dir}"
+i "${idir}" "${smp}"
+
 #touch "${dir}/.autorelabel"
 #i extra "${smp}"
 #chroot . /bin/bash
@@ -70,6 +74,11 @@ if [ -f "${FSTAB}" ]; then
 else
   chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptdt.sh"
 fi
-umount extra/repo
+umount "${idir}"
 umount dev proc sys
 
+if [[ -z "$SKIP_RESTORECON" ]]
+then
+  chcon -v --reference=/ "${dir}"
+  bash -x "${smp}/restorecon.sh" "${1}"
+fi
