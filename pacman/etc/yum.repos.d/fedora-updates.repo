@@ -1,7 +1,7 @@
 [updates]
 name=Fedora $releasever - $basearch - Updates
-baseurl=https://mirror.plusline.net/fedora/linux/updates/$releasever/Everything/$basearch/
-#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
+#baseurl=https://mirror.plusline.net/fedora/linux/updates/$releasever/Everything/$basearch/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
 enabled=1
 countme=1
 repo_gpgcheck=0
@@ -10,6 +10,7 @@ gpgcheck=1
 metadata_expire=6h
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
+proxy=http://localhost:9050
 
 [updates-debuginfo]
 name=Fedora $releasever - $basearch - Updates - Debug

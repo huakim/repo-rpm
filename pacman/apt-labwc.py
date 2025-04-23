@@ -5,7 +5,7 @@ env=pkgs
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-"waterfox-kde",
+"ungoogled-chromium",
 #"keepassxc",
 "varia",
 "transmission-gtk",

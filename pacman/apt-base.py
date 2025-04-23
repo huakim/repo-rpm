@@ -21,7 +21,7 @@ if pkgs.check("LIVEINSTALL"):
 
 if pkgs.check("EXTRAINSTALL"):
     pkgs.extend((
-"java-devel",
+"java-system-latest-openjdk-devel",
 "lua",
 "c++",
 "copr-cli",

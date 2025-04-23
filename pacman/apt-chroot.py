@@ -99,6 +99,7 @@ def DNF_CONFIG():
         NOGPGCHECK=env('NOGPGCHECK')
         RECOMMENDS=env('RECOMMENDS')
         DOCS=env('DOCS')
+        PROXY=env('PROXY')
         DOWNLOADONLY=env('DOWNLOADONLY')
         CACHEDIR=env('CACHEDIR')
         LIBDIR=env('LIBDIR')
@@ -109,6 +110,8 @@ def DNF_CONFIG():
           '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
             flags.extend(('--setopt','cachedir='+CACHEDIR))
+        if chstr(PROXY):
+            flags.extend(('--setopt', 'proxy='+PROXY))
         if chstr(LIBDIR):
             flags.extend(('--setopt','persistdir='+LIBDIR))
         if check(QUIET):
