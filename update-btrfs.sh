@@ -27,6 +27,7 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
                 FSTAB=/etc/fstab
                 INSTALL_NEW_RECOMMENDS=yes
                 . ./bootstrap.sh "${variant}"
+                systemd-nspawn -D "${smp}/bootstrap-${variant}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
                 umount "${smp}/bootstrap-${variant}/home"
                 umount "${smp}/bootstrap-${variant}"
             )

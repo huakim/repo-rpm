@@ -51,7 +51,7 @@ i "${idir}" "${smp}"
 #chroot "${dir}" /bin/bash
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/copy.sh"
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/setup.sh"
-chroot "${dir}" /usr/bin/env "DEFAULTUSER=${DEFAULTUSER}" bash "/${idir}/pacman/user.sh"
+chroot "${dir}" /usr/bin/env "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
 
 #if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
 #  chroot "${dir}" /usr/bin/env zypper -C "${smp}/pacman/var/cache/zypp" --auto-agree-with-licenses --non-interactive -vvv --gpg-auto-import-keys install-new-recommends

@@ -1,10 +1,18 @@
 #!/bin/sh
 user="${DEFAULTUSER:-asus}"
 password='$6$iA6fDx4yzWKxy7tM$JShiydfJpce4mO28LD8pECBWFLjSG.ZMrqXFGS8pztB9T6I72NzZNBJ9PS08/xw2QLkJoJ92tAGqPZxSVv8xn1'
+password="${DEFAULTPASSWORD:-$password}"
 admin='wheel'
 root='root'
 
-for i in xonsh bash sh
+if [[ -z "${USEDEFAULTS}" && -z "${DEFAULTUSER}" && -z "${DEFAULTPASSWORD}" && -n "$(command -v mkpasswd)" ]]
+then
+ echo -n 'User: '
+ read user
+ password="$(mkpasswd)"
+fi
+
+for i in xonsh bash shs
 do
  if [[ -f "/bin/$i" ]]
   then
