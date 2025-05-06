@@ -19,12 +19,12 @@ if pkgs.check("EXTRAINSTALL"):
 "kinfocenter",
 "okular",
 "python-copr_pyside+pyqt6",
-"kget",
+#"kget",
 "neochat",
 "zapzap",
 'libreoffice-kf6',
 "qt6-qtwebengine-devtools",
-"transmission-qt",
+#"transmission-qt",
 "libyui-mga-qt",
 "remmina-plugins-kwallet"
 ))

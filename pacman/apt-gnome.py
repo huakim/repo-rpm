@@ -6,11 +6,11 @@ if pkgs.check("EXTRAINSTALL"):
    pkgs.extend((
 "evince",
 "copr-wx",
-"varia",
+#"varia",
 "fractal",
 "Tangram",
 'libreoffice-gtk3',
-"transmission-gtk",
+#"transmission-gtk",
 "libyui-mga-gtk",
 "remmina-plugins-secret"
 ))

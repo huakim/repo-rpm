@@ -16,7 +16,9 @@ qemu=(
 'gparted',
 'remmina-plugins-rdp',
 'remmina-plugins-vnc',
-'remmina'
+'remmina',
+'deluge-gtk',
+'deluge-web'
 )
 
 if pkgs.check("LIVEINSTALL"):
