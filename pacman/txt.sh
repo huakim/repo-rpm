@@ -132,6 +132,7 @@ link "VirtualBox VMs"
 link "Workspace"
 
 clone ".local/share/64Gram" ".local/share/TelegramDesktop"
+clone ".local/share/64Gram" ".local/share/AyuGramDesktop"
 clone "Workspace" "workspace"
 clone "Workspace" "projects"
 clone "Workspace" "Projects"
